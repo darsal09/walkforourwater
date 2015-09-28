@@ -1,0 +1,154 @@
+
+DROP PROCEDURE wfow_create_event$$
+CREATE PROCEDURE wfow_create_event( IN title VARCHAR( 250), IN description TEXT, IN date DATE, IN time TIME, IN locationID INT )
+	INSERT INTO
+	events( title, description, date, time, location_id )
+	VALUES( title, description, date, time, locationID );
+	
+	SELECT LAST_INSERT_ID();
+END$$
+
+DROP PROCEDURE wfow_update_event$$
+CREATE PROCEDURE wfow_update_event( IN eventID INT, IN title VARCHAR( 250), IN description TEXT, IN date DATE, IN time TIME, IN locationID INT )
+	DECLARE eventNumber INT;
+
+	SELECT COUNT( 0 ) 
+	FROM events
+	WHERE title = title AND event_id != eventID
+	INTO eventNumber;
+
+	IF eventNumber = 0 THEN
+		UPDATE events
+		SET title = title, description = description, date = date, time = time, location_id = location_id 
+		WHERE event_id = eventID;
+
+		SELECT 1;
+	ELSE
+		SELECT -1;
+	END IF;
+END$$
+
+
+DROP PROCEDURE wfow_exist_event$$
+CREATE PROCEDURE wfow_exist_event( IN title VARCHAR( 250) )
+	SELECT event_id
+	FROM events
+	WHERE title = title;	
+END$$
+
+DROP PROCEDURE wfow_remove_event$$
+CREATE PROCEDURE wfow_remove_event( IN eventID )
+	DECLARE eventNumber INT;
+	
+	CALL wfow_registrations_event( eventID ) INTO registrations;
+	
+	IF registrations = 0 THEN
+		CALL wfow_delete_event( eventID );
+		CALL wfow_delete_directions_event( eventID );
+		SELECT 1;
+	ELSE
+		SELECT -1;
+	END IF;
+END$$
+
+DROP PROCEDURE wfow_delete_event$$
+CREATE PROCEDURE wfow_delete_event( IN eventID INT )
+	DELETE FROM events WHERE event_id = eventID;
+END$$
+
+DROP PROCEDURE wfow_delete_directions_event$$
+CREATE PROCEDURE wfow_delete_directions_event( IN eventID INT )
+	DELETE FROM event_directions WHERE event_id = eventID;
+END$$
+
+
+DROP PROCEDURE wfow_registrations_event$$
+CREATE PROCEDURE wfow_registrations_event( IN eventID INT)
+	SELECT COUN( 0 )
+	FROM registrations
+	WHERE event_id = eventID;
+END$$
+
+DROP PROCEDURE wfow_donations_event$$
+CREATE PROCEDURE wfow_donations_event( IN eventID INT )
+	SELECT COUNT( 0 )
+	FROM donations
+	WHERE event_id = eventID;
+END$$
+
+DROP PROCEDURE wfow_get_event$$
+CREATE PROCEDURE wfow_get_event( IN eventID INT )
+BEGIN
+	SELECT
+		*
+		FROM events
+		WHERE event_id= eventID;
+END$$
+
+DROP PROCEDURE wfow_get_event_location$$
+CREATE PROCEDURE wfow_get_event_location( IN locationID INT )
+BEGIN
+	SELECT
+		*
+	FROM locations
+	WHERE location_id = locationID;
+END$$
+
+DROP PROCEDURE wfow_get_events$$
+CREATE PROCEDURE wfow_get_events( )
+BEGIN
+	SELECT
+		*
+	FROM events
+	ORDER BY date DESC;
+END$$
+
+DROP PROCEDURE wfow_get_upcoming_events$$
+CREATE PROCEDURE wfow_get_updcomings_events( IN limits INT, IN offset INT )
+BEGIN
+	SELECT
+		*
+	FROM events
+	WHERE date >= NOW()
+	ORDER BY date DESC
+	LIMIT limits
+	OFFSET offset;
+END$$
+
+DROP PROCEDURE wfow_get_previous_events$$
+CREATE PROCEDURE wfow_get_previous_events( IN limits INT, IN offset INT)
+BEGIN
+	SELECT
+		*
+	FROM events
+	WHERE date <= NOW()
+	ORDER BY date DESC
+	LIMIT limits
+	OFFSET offset;
+END$$
+
+DROP PROCEDURE wfow_get_previous_events$$
+CREATE PROCEDURE wfow_get_registrations_events( IN eventID INT, IN limits INT, IN offset INT )
+BEGIN
+	SELECT
+		*
+	FROM registrations
+	WHERE event_id = eventID
+	ORDER BY added_on DESC
+	LIMIT limits
+	OFFSET offset;
+END$$
+
+DROP PROCEDURE wfow_get_donations_events$$
+CREATE PROCEDURE wfow_get_donations_events( IN eventID INT, IN limits INT, IN offset INT )
+BEGIN
+	SELECT
+		*
+	FROM donations
+	WHERE event_id = eventID
+	ORDER BY added_on DESC
+	LIMIT limits
+	OFFSET offset;
+END$$
+
+

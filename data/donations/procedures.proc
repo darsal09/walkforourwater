@@ -1,0 +1,9 @@
+DROP PROCEDURE wfow_get_donations$$
+CREATE PROCEDURE wfow_get_donations( )
+BEGIN
+	SELECT
+		*
+	FROM donate d
+	LEFT JOIN users u on u.user_id = d.user_id
+	ORDER BY d.added_on, d.modefied_on DESC;
+END$$

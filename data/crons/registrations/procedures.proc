@@ -1,0 +1,39 @@
+DROP PROCEDURE wfow_get_new_registrations$$
+CREATE PROCEDURE wfow_get_new_registrations()
+BEGIN
+	SELECT 
+		u.user_id,
+		u.first,
+		u.email,
+		r.register_id,
+		r.event_id
+	FROM registration r
+	LEFT JOIN users u ON u.user_id = r.user_id
+	LEFT JOIN registrations_emails re on re.registration_id = r.register_id
+	WHERE r.status = 'Completed' AND re.id is null
+	LIMIT 1;
+END$$
+
+DROP PROCEDURE wfow_get_incomplete_registrations$$
+CREATE PROCEDURE wfow_get_incomplete_registrations()
+BEGIN
+	SELECT 
+		u.user_id,
+		u.first,
+		u.email,
+		r.register_id,
+		r.event_id
+	FROM registration r
+	LEFT JOIN users u ON u.user_id = r.user_id
+	LEFT JOIN registrations_emails re on re.registration_id = r.register_id
+	WHERE r.status = 'Pending' AND re.id is null
+	LIMIT 1;
+END$$
+
+DROP PROCEDURE wfow_add_registrations_emails$$
+CREATE PROCEDURE wfow_add_registrations_emails( IN userID INT, IN registerID INT, IN eventID INT, IN type VARCHAR( 50 ))
+BEGIN
+	INSERT INTO
+	registrations_emails( user_id, registration_id, event_id, type )
+	VALUES( userID, registerID, eventID, type );
+END$$

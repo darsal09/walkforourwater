@@ -1,0 +1,16 @@
+DROP PROCEDURE wfow_get_registrations$$
+CREATE PROCEDURE wfow_get_registrations( )
+BEGIN
+	SELECT
+		r.register_id,
+		u.first,
+		u.last,
+		r.added_on AS date,
+		r.status,
+		r.type,
+		e.title
+	FROM registration r
+	LEFT JOIN users u on u.user_id = r.user_id
+	LEFT JOIN events e on e.event_id = r.event_id
+	ORDER BY r.added_on, r.modefied_on DESC;
+END$$

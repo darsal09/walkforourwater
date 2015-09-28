@@ -1,0 +1,86 @@
+<IfModule mod_rewrite.c>
+
+  # Enable mod_rewrite
+  RewriteEngine On
+
+  # Specify the folder in which the application resides.
+  # Use / if the application is in the root. 
+  RewriteBase /
+
+  # Redirect to correct domain to avoid canonicalization problems
+  # RewriteCond %{HTTP_HOST} !^www\.example\.com
+  # RewriteRule ^(.*)$ http://www.example.com/$1 [R=301,L]
+
+  # Redirect URLs ending in /index.php or /index.html to /
+
+#	RewriteCond %{HTTPS} !on$
+#	RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]  
+	RewriteCond %{THE_REQUEST} ^GET\ .*/index\.(php|html?)\ HTTP
+	RewriteRule ^(.*)index\.(php|html?)$ $1 [R=301,L]
+	
+	#Rewrite rules/
+	RewriteRule ^donate/?$ index.php?action=donate [L]
+	RewriteRule ^donations/([0-9]+)/success/([0-9]+)/paypals/([a-z0-9A-Z]+)?$ index.php?wfow_donate_id=$1&wfow_amount=$2&wfow_paypal_receipt_id=$3&action=donateSuccess [L]
+	RewriteRule ^donations/([0-9]+)/cancel/([0-9]+)?$ index.php?wfow_donate_id=$1&wfow_amount=$2&action=donateCancel [L]
+	
+	RewriteRule ^paypals/([a-zA-Z]+)/([0-9]+)/([0-9]+)/([a-zA-Z]+)/([0-9a-zA-Z]+)?$ index.php?wfow_route=$1&wfow_id=$2&wfow_amount=$3&wfow_status=$4&wfow_paypal_receipt_id=$5&action=paypal [L]
+	
+	#Rewrite rules/
+	RewriteRule ^faq/?$ index.php?action=faq [L]
+	#Rewrite rules/
+	RewriteRule ^contact-us[/]?$ index.php?action=contact [L]
+	RewriteRule ^contact-us/success[/]?$ index.php?action=contactSuccess [L]
+	#Rewrite rules/
+	RewriteRule ^sign-in/?$ index.php?action=signin [L]
+	RewriteRule ^password/forgot/?$ index.php?action=forgotPassword [L]
+	
+	#Rewrite rules/
+	
+	RewriteRule ^my-dashboard/?$ index.php?action=my-dashboard [L]
+
+
+	RewriteRule ^events/?$ index.php?action=events [L]
+	RewriteRule ^events/([0-9]+)?$ index.php?wfow_event_id=$1&action=event [L]
+	
+	
+	RewriteRule ^register/?$ index.php?action=register [L]
+	RewriteRule ^registrations/email/([0-9]+)?$ index.php?receipt_id=$1&action=registerEmail [L]
+	RewriteRule ^registrations/([0-9]+)/success/([0-9]+)/paypals/([a-z0-9A-Z]+)?$ index.php?wfow_registration_id=$1&wfow_amount=$2&wfow_paypal_receipt_id=$3&action=registerSuccess [L]	
+	RewriteRule ^registrations/([0-9]+)/success/?$ index.php?wfow_registration_id=$1&status=Completed&action=registerSuccess [L]	
+	RewriteRule ^registrations/([0-9]+)/cancel/([0-9]+)?$ index.php?wfow_registration_id=$1&amount=$2&action=registerCancel [L]	
+
+		
+	RewriteRule ^admin/?$ index.php?folder=admin [L]
+	RewriteRule ^admin/users?$ index.php?folder=admin&action=users [L]
+	RewriteRule ^admin/users/([0-9]+)?$ index.php?folder=admin&wfow_user_id=$1&action=user [L]
+	RewriteRule ^admin/registrations?$ index.php?folder=admin&action=registrations [L]	
+	RewriteRule ^admin/registrations/([0-9]+)?$ index.php?wfow_registration_id=$1&folder=admin&action=registration [L]	
+	RewriteRule ^admin/donations?$ index.php?folder=admin&action=donations [L]	
+	RewriteRule ^admin/donations/([0-9]+)?$ index.php?wfow_donation_id=$1&folder=admin&action=donation [L]	
+	RewriteRule ^admin/events?$ index.php?folder=admin&action=events [L]
+	RewriteRule ^admin/events/([0-9]+)?$ index.php?wfow_event_id=$1&folder=admin&action=event [L]	
+	RewriteRule ^admin/supporters?$ index.php?folder=admin&action=supporters [L]	
+	RewriteRule ^admin/supporters/([0-9]+)?$ index.php?wfow_supporters_id=$1&folder=admin&action=supporter [L]		
+	RewriteRule ^admin/contacts?$ index.php?folder=admin&action=messages [L]		
+		
+	
+	
+	#Rewrite rules/
+	RewriteRule ^request-info/?$ index.php?action=requestInfo [L]
+	RewriteRule ^request-info/([0-9]+)/success?$ index.php?request_info_id=$1&action=requestInfoSuccess [L]
+		
+	#Rewrite logoff/
+	RewriteRule ^log-off/?$ index.php?action=logoff [L]
+	#Rewrite myaccount/
+	RewriteRule ^my-account/?$ index.php?myAccount [L]
+	#Rewrite About us/
+	RewriteRule ^about-us/?$ index.php?action=aboutus [L]
+	RewriteRule ^supporters[/]?$ index.php?action=supporters [L]
+	
+</IfModule>
+
+# Set the default 500 page for Apache errors
+ErrorDocument 500 500.php
+
+# Set the default 404 page
+ErrorDocument 404 /404.php

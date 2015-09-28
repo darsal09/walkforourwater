@@ -1,0 +1,1 @@
+{load_presentation_object filename="myDashboard" assign="object"}

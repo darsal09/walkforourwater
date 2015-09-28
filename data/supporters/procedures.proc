@@ -1,0 +1,8 @@
+DROP PROCEDURE wfow_get_supporters$$
+CREATE PROCEDURE wfow_get_supporters( )
+BEGIN
+	SELECT
+		*
+	FROM supporters
+	ORDER BY district DESC;
+END$$

@@ -1,0 +1,409 @@
+CREATE TABLE 'tgp_classes' (
+	'class_id' INT NOT NULL AUTO_INCREMENT,
+	'title' VARCHAR( 100 ) NOT NULL,
+	'start_time' TIME NOT NULL,
+	'end_time' TIME NOT NULL,
+	'weekday' ENUM( 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ) NOT NULL,
+	'season' ENUM( 'Fall', 'Winter', 'Spring', 'Summer' ) NOT NULL,
+	'start_date' DATE NOT NULL,
+	'end_date' DATE NOT NULL,
+	'location_id' INT NOT NULL,
+	'instructor_id' INT NOT NULL,
+	'category_id' INT NOT NULL,
+	PRIMARY KEY( 'class_id' )
+	) ENGINE=MyISAM;
+
+	
+CREATE PROCEDURE tgp_get_programs()
+BEGIN
+	SELECT program_id, title
+	FROM tgp_programs
+	ORDER BY title ASC;
+END$$
+
+CREATE PROCEDURE tgp_get_program( IN programID INT )
+BEGIN
+	SELECT *
+	FROM tgp_programs 
+	WHERE program_id = programID;
+END$$
+
+CREATE PROCEDURE tgp_get_program_categories( IN programID INT )
+BEGIN
+	SELECT *
+	FROM tgp_classes_categories
+	WHERE program_id = programID
+	ORDER BY title;
+END$$
+
+CREATE PROCEDURE tgp_get_program_category_classes( IN programID INT, IN categoryID INT )
+BEGIN
+	IF programID > 0 THEN
+		IF categoryID > 0 THEN
+			SELECT c.*, p.title AS program_title, cc.title AS category_title
+			FROM tgp_classes c
+			INNER JOIN tgp_programs p ON p.program_id = programID
+			INNER JOIN tgp_classes_categories cc ON cc.cc_id = categoryID
+			WHERE c.tgp_program_id = programID AND c.tgp_class_category_id = categoryID
+			ORDER BY c.title;
+		ELSE
+			SELECT -1;
+		END IF;
+	ELSE
+		SELECT -1;
+	END IF;
+END$$
+
+CREATE PROCEDURE tgp_get_program_classes( IN programID INT )
+BEGIN
+	SELECT c.*, ct.title AS title, p.title AS program_title, cc.title AS category_title
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	INNER JOIN tgp_programs p ON p.program_id = programID
+	INNER JOIN tgp_classes_categories cc ON cc.cc_id = c.tgp_class_category_id
+	WHERE c.tgp_program_id = programID
+	ORDER BY c.weekday, c.start_time, ct.title;
+END$$
+
+CREATE PROCEDURE tgp_get_class_categories( IN classID INT )
+BEGIN
+	SELECT *
+	FROM tgp_classes_categories
+	WHERE cc_id IN ( SELECT tgp_class_category_id FROM tgp_classes WHERE class_id = classID )
+	ORDER BY title ASC;
+END$$
+
+CREATE PROCEDURE tgp_get_classes()
+BEGIN
+	SELECT c.*, ct.title AS title, ct.age_group, p.title AS program_title, cc.title AS category_title, cc.description
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	INNER JOIN tgp_programs p ON p.program_id = c.tgp_program_id
+	INNER JOIN tgp_classes_categories cc ON cc.cc_id = c.tgp_class_category_id
+	ORDER BY ct.title, ct.age_group, c.start_time;
+END$$
+
+CREATE PROCEDURE tgp_get_specific_classes( IN classIDS VARCHAR( 250 ) )
+BEGIN
+	SELECT c.*, ct.title AS title, ct.age_group 
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	WHERE c.class_id IN ( classIDS )
+	ORDER BY ct.title, ct.age_group, c.start_time;
+END$$
+
+CREATE PROCEDURE tgp_get_class( IN classID INT )
+BEGIN
+	SELECT c.*, ct.title AS title, ct.type AS type, p.title AS program_title, cc.title AS category_title, cc.description
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	INNER JOIN tgp_programs p ON p.program_id = c.tgp_program_id
+	INNER JOIN tgp_classes_categories cc ON cc.cc_id = c.tgp_class_category_id
+	WHERE c.class_id = classID;
+END$$	
+
+CREATE PROCEDURE tgp_get_classes_category_program( IN classID INT )
+BEGIN
+	SELECT c.*, p.title AS program_title, cc.title AS category_title, cc.description
+	FROM tgp_classes c
+	INNER JOIN tgp_programs p ON p.program_id = c.tgp_program_id
+	INNER JOIN tgp_classes_categories cc ON cc.cc_id = c.tgp_class_category_id
+	WHERE c.class_id != classID AND c.tgp_program_id IN ( SELECT tgp_program_id FROM tgp_classes WHERE class_id = classID );
+END$$
+
+
+CREATE PROCEDURE tgp_get_categories()
+BEGIN
+	SELECT *
+	FROM tgp_classes_categories
+	ORDER BY title;
+END$$
+
+CREATE PROCEDURE tgp_get_category( IN categoryID INT )
+BEGIN
+	SELECT * 
+	FROM tgp_classes_categories
+	WHERE cc_id = categoryID;
+END$$
+
+CREATE PROCEDURE tgp_get_category_classes( IN categoryID INT )
+BEGIN 
+	SELECT c.*, ct.title AS title
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	WHERE c.category_id = categoryID
+	ORDER BY c.weekday, c.start_time, ct.title;
+END$$
+
+//This procedure would display the 5 featured classes in the main page
+CREATE PROCEDURE tgp_get_featured_classes( )
+BEGIN
+	SELECT *
+	FROM tgp_classes c
+	WHERE c.featured = 'Y'
+	ORDER BY c.title;
+END$$
+
+//This procedure would display the featured classes in a program
+CREATE PROCEDURE tgp_get_program_featured_classes( IN programID INT )
+BEGIN
+	SELECT c.*, ct.title AS title 
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	WHERE c.tgp_program_id = programID AND c.program_featured = 'Y'
+	ORDER BY c.weekday, c.start_time, ct.title;
+END$$
+
+//This procedure would display the freatured classes in a category
+CREATE PROCEDURE tgp_get_category_featured_classes( IN categoryID INT )
+BEGIN
+	SELECT c.*, ct.title AS title
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	WHERE c.tgp_class_category_id = categoryID AND c.category_featured = 'Y'
+	ORDER BY c.weekday, c.start_time, ct.title;
+END$$
+
+CREATE PROCEDURE tgp_get_day_classes( IN weekDay VARCHAR( 9 ), IN season VARCHAR( 6), IN year INT )
+BEGIN
+	SELECT c.*, ct.title AS title, ct.age_group
+	FROM tgp_classes c
+	INNER JOIN class_titles ct ON ct.id = c.title_id
+	WHERE c.weekday = weekDay AND c.season = season AND c.year = year
+	ORDER BY ct.title, ct.age_group;
+END$$
+//CALL tgp_get_day_classes( 'Monday', 'Fall', 2012 );
+
+
+//signs up a user
+CREATE PROCEDURE tgp_create_user( IN name VARCHAR( 100 ), IN email VARCHAR( 150 ), IN pswd VARCHAR( 32 ) )
+BEGIN
+	INSERT INTO tgp_users ( uName, uEmail, uPswd )
+	VALUES( name, email, pswd );
+END$$
+
+CREATE PROCEDURE tgp_does_email_exist( IN email VARCHAR( 150 ) )
+BEGIN
+	SELECT uEmail
+	FROM tgp_users
+	WHERE uEmail = email;
+END$$
+
+CREATE PROCEDURE tgp_get_user( IN uID INT )
+BEGIN
+	SELECT * 
+	FROM tgp_users
+	WHERE id = uID;
+END$$
+
+CREATE PROCEDURE tgp_signin_user( IN email VARCHAR( 150 ), IN pswd VARCHAR(32) )
+BEGIN
+	SELECT * 
+	FROM tgp_users
+	WHERE uEmail = email AND uPswd = pswd;
+END$$
+
+CREATE PROCEDURE tgp_get_age_groups()
+BEGIN
+	SELECT *
+	FROM tgp_age_groups
+	ORDER BY title;
+END$$
+
+CREATE PROCEDURE tgp_get_class_titles()
+BEGIN
+	SELECT *
+	FROM class_titles
+	ORDER BY title, age_group;
+END$$
+
+//Insert programs
+CREATE PROCEDURE tgp_add_program( IN inTitle VARCHAR( 100 ), IN inDescription TEXT )
+BEGIN
+	INSERT INTO tgp_programs ( title, description )
+	VALUES( inTitle, inDescription );
+END$$
+
+CREATE PROCEDURE tgp_update_program( IN programID INT, IN programTitle VARCHAR( 150 ), IN programDescription TEXT )
+BEGIN 
+	UPDATE tgp_programs
+	SET title = programTitle, description = programDescription
+	WHERE program_id = programID;	
+END$$
+
+//insert category
+CREATE PROCEDURE tgp_add_category( IN inTitle VARCHAR( 100 ), IN inDescription TEXT, IN inProgramID INT )
+BEGIN
+	INSERT INTO tgp_classes_categories ( title, description, program_id )
+	VALUES( inTitle, inDescription, inProgramID );
+END$$
+
+CREATE PROCEDURE tgp_update_category( IN categoryID INT, IN programID INT, IN categoryTitle VARCHAR( 150 ), IN categoryDescription TEXT )
+BEGIN
+	UPDATE tgp_classes_categories
+	SET title = categoryTitle, description = categoryDescription, program_id = programID
+	WHERE cc_id = categoryID;
+END$$
+
+CREATE PROCEDURE tgp_update_class( IN classID INT, IN classTitleID INT, IN classWeekday VARCHAR(10), IN classStartTime TIME, IN classEndTime TIME, IN classStartDate DATE, IN classEndDate DATE, IN classPrice INT )
+BEGIN
+	UPDATE tgp_classes
+	SET title_id = classTitleID, weekday = classWeekday, start_time = classStartTime, end_time = classEndTime, start_date = classStartDate, end_date = classEndDate, price = classPrice
+	WHERE class_id = classID;
+END$$
+
+//it only deletes a category that doesn't have class in it
+CREATE PROCEDURE tgp_delete_category( IN categoryID INT )
+BEGIN
+	DECLARE categoryRowsCount INT;
+
+	SELECT COUNT( * ) 
+	FROM tgp_classes
+	WHERE tgp_class_category_id = categoryID
+	INTO categoryRowsCount;
+
+	IF categoryRowsCount = 0 THEN
+		DELETE FROM tgp_classes_categories WHERE cc_id = categoryID;
+		SELECT 1;
+	ELSE
+		SELECT -1;
+	END IF;
+END$$
+
+//it only deletes a program that doesn't have a class or categories in it
+CREATE PROCEDURE tgp_delete_program( IN programID INT )
+BEGIN
+	DECLARE programClassRowsCount INT;
+	DECLARE programCategoryRowsCount INT;
+
+	SELECT COUNT( * )
+	FROM tgp_classes 
+	WHERE tgp_program_id = programID
+	INTO programClassRowsCount;
+
+	SELECT COUNT( * )
+	FROM tgp_classes 
+	WHERE tgp_program_id = programID
+	INTO programCategoryRowsCount;
+
+	IF programClassRowsCount = 0 AND programCategoryRowsCount =  0 THEN
+		DELETE FROM tgp_programs WHERE program_id = programID;
+		SELECT 1;
+	ELSE
+		SELECT -1;
+	END IF;
+END$$
+
+CREATE PROCEDURE tgp_add_class( IN titleID INT, IN yearIN INT, IN startTime TIME, IN endTime TIME, IN weekDay VARCHAR( 10 ), IN startDate DATE, IN endDate DATE, IN seasonIN VARCHAR( 10 ), IN categoryID INT, IN programID INT, IN priceIN INT, IN programFeatured VARCHAR(1), IN categoryFeatured VARCHAR( 1 ), IN typeIN VARCHAR( 20 ) )
+BEGIN
+	INSERT INTO tgp_classes ( title_id, year, start_time, end_time, weekday, start_date, end_date, season, tgp_class_category_id, category_id, tgp_program_id, price, program_featured, category_featured, type  )
+	VALUES( titleID, yearIN, startTime, endTime, weekDay, startDate, endDate, seasonIN, categoryID, categoryID, programID, priceIN, programFeatured, categoryFeatured, typeIN );
+	
+	SELECT LAST_INSERT_ID();
+END$$
+CREATE PROCEDURE tgp_add_class_title( IN title VARCHAR( 150 ), IN ageGroup VARCHAR( 100 ), IN programID INT, IN categoryID INT )
+BEGIN
+	INSERT INTO class_titles ( title, age_group, program_id, category_id )
+	VALUES ( title, ageGroup, programID, categoryID);
+
+	SELECT LAST_INSERT_ID();
+END$$
+
+CREATE PROCEDURE tgp_add_class_package( IN packageTitle VARCHAR( 150 ), IN packagePrice INT, IN packageType VARCHAR( 20 ) )
+BEGIN
+	INSERT INTO tgp_class_packages( title, price, type )
+	VALUES( packageTitle, packagePrice, packageType );
+END$$
+
+CREATE PROCEDURE tgp_add_package_to_Class( IN packageID INT, IN classID INT )
+BEGIN
+	INSERT INTO tgp_packages_classes_junction( package_id, class_id )
+	VALUES( packageID, classID );
+END$$
+
+CREATE PROCEDURE tgp_get_class_group( IN groupID INT )
+BEGIN
+	SELECT *
+	FROM class_titles
+	WHERE id = groupID;
+END$$
+
+CREATE PROCEDURE tgp_get_packages()
+BEGIN
+	SELECT *
+	FROM tgp_class_packages
+	ORDER BY type, title;	
+END$$
+
+//Memberships
+CREATE PROCEDURE tgp_user_add_membership( IN userID INT, IN membershipID INT )
+BEGIN
+	INSERT INTO 
+	tgp_user_memberships( user_id, membership_id )
+	VALUES( userID, membership ID );
+END$$
+
+CREATE PROCEDURE tgp_user_has_membership( IN userID INT )
+BEGIN
+	DECLARE membershipRows INT;
+
+	SELECT COUNT( * ) 
+	FROM tgp_user_memberships
+	WHERE user_id = userID
+	INTO membershipRows;
+
+	IF membershipRows = 0  THEN
+		SELECT 0;
+	ELSE
+		SELECT 1;
+	END IF;
+END$$
+
+CREATE PROCEDURE tgp_user_get_membership( IN userID INT )
+BEGIN 
+	SELECT * 
+	FROM tgp_user_memberships
+	WHERE user_id = userID;
+END$$
+
+CREATE PROCEDURE tgp_user_last_login( IN userID INT )
+BEGIN 
+	UPDATE tgp_users 
+	SET lastLogIn = NOW()
+	WHERE id = userID;
+END$$
+
+CREATE PROCEDURE tgp_get_program_class_titles( IN programID INT )
+BEGIN 
+	SELECT *
+	FROM class_titles
+	WHERE program_id = programID
+	ORDER BY title;
+END$$
+
+CREATE PROCEDURE tgp_get_category_class_titles( IN categoryID INT )
+BEGIN
+	SELECT *
+	FROM class_titles
+	WHERE category_id = categoryID
+	ORDER BY title;
+END$$
+
+CREATE PROCEDURE tgp_get_classes_in_class_group( IN classGroupID INT )
+BEGIN
+	SELECT *
+	FROM tgp_classes
+	WHERE title_id = classGroupID
+	ORDER BY weekday, start_time;
+END$$
+
+CREATE PROCEDURE tgp_get_class_packages( IN classGroupID INT, IN type VARCHAR( 100 ) )
+BEGIN
+	SELECT cp.*
+	FROM tgp_packages_classes_junction pcj
+	INNER JOIN tgp_class_packages cp ON cp.id = pcj.package_id
+	WHERE pcj.class_id = classGroupID AND cp.type = type;
+END$$
+
+
+CREATE PROCEDURE tgp_shopping_cart_add_class( IN classID INT, IN cartID VARCHAR( 32 ), 
