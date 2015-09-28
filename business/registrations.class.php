@@ -29,6 +29,21 @@ class registrations{
 	public static function getAll(){
 		return registrationsTable::getAll();
 	}
+
+    public static function get( $rID ){
+        $sql = "SELECT
+					u.user_id,
+					u.first,
+					u.email,
+					r.register_id,
+					r.event_id
+				FROM registration r
+				LEFT JOIN users u ON u.user_id = r.user_id
+				LEFT JOIN registrations_emails re on re.registration_id = r.register_id
+				WHERE r.register_id = :rID";
+
+        return databaseHandler::getRow( $sql, [ ':rID' => $rID ]);
+    }
 	
 }
 ?>

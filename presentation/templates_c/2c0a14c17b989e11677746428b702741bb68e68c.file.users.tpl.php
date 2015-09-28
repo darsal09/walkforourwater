@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-28 12:01:27
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-28 12:47:41
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\users.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1594355db0b13cb8af7-51779690%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c0a14c17b989e11677746428b702741bb68e68c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\users.tpl',
-      1 => 1443456084,
+      1 => 1443458851,
       2 => 'file',
     ),
   ),
@@ -38,6 +38,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<th>First</th>
 					<th>Last</th>
 					<th>Email</th>
+                    <th>Type</th>
+                    <th>Status</th>
 				</thead>
 				<tbody>
 				</tbody>
@@ -155,22 +157,19 @@ var users ={
 	events:function(){
 		$( '#addUserButton' ).on( 'click', { parent:this}, this.ui.onAddUserClicked);
 		this.mTable.on( 'click', 'tbody tr', { parent:this}, this.ui.onRowClicked);
+        editUser.events();
+        addUser.events();
 	},
 	ui:{
 		onRowClicked:function( e ){
 			var row = e.data.parent.mTable.DataTable().row( this ).data();
-			var type = 'active';
-			
-			if( $( this ).hasClass( 'warning' )){
-				type = 'inactive';
-			}
-			
+
 			editUser.init( {
-				'id':row[0],
-				'first':row[ 1],
-				'last':row[ 2],
-				'email':row[ 3 ],
-				'type':type
+				'id':row.user_id,
+				'first':row.first,
+				'last':row.last,
+				'email':row.email,
+				'status':row.status.toLowerCase()
 			}, this );
 		},
 		onAddUserClicked:function(e){
@@ -185,14 +184,16 @@ var users ={
         }
 
 		this.mTable.DataTable({
-			"processing": true,
-			"serverSide": true,
 			"ajax":"/api/admin/users/all.php",
             "columns": [
                 { "data": "user_id", 'className':'more_info'},
                 { "data": "first"},
                 { "data": "last" },
                 { "data": "email"},
+                { "data": "type"},
+                { 'data':'status', 'render':function( status, type, row ){
+                    return status;
+                }}
             ]
 		});
 		
@@ -218,7 +219,6 @@ var addUser = {
 							'type':true
 							});		
 		showModal( 'addUserModal' );
-		this.events();
 	},
 	events:function(){
 		$( '#saveUser' ).on( 'click', { parent:this}, this.ui.onSaveUserClicked);
@@ -277,13 +277,12 @@ var editUser={
 	init:function( row, event ){
 		this.mModal = $( '#editUserModal' );
 		this.mForm = $( '#editUserForm' );
-		this.events();
 		this.mRowEvent = event;
 		this.loadUser( row );
 		this.type={
 			'active':'selected',
 			'inactive':'no-selected'
-		}
+		};
 		
 		this.validateForm = validateForm;
 		this.validateForm.init( 'editUserForm', {
@@ -291,15 +290,14 @@ var editUser={
 			'last':true,
 			'email':true,
 			'status':true,
-			'id':true,
+			'id':true
 		});
-
+        this.mModal.modal( 'show' );
 	},
 	events:function(){
-		this.mModal.modal( 'show' );
 		$( '#saveEditUser' ).on( 'click', { parent:this}, this.ui.onFormSubmitClicked);
 		$( '#editUserFormActive' ).on( 'click',  { parent:this}, this.ui.onLabelSelected);
-		$( '#editUserFormInactive' ).on( 'click',  { parent:this}, this.ui.onLabelUnselected);		
+		$( '#editUserFormInactive' ).on( 'click',  { parent:this}, this.ui.onLabelUnselected);
 	},
 	ui:{
 		onFormSubmitClicked:function( e ){
@@ -328,11 +326,11 @@ var editUser={
 		}
 	
 	},
-	loadUser:function( row ){		
+	loadUser:function( row ){
 		var active  = $( '#editUserFormActive' );
 		var inactive = $( '#editUserFormInactive' );
 		
-		if( row.type == 'active' ){
+		if( row.status == 'active' ){
 			active.addClass( 'selected' );
 			active.removeClass( 'no-selected' );
 			inactive.removeClass( 'selected');
@@ -353,9 +351,8 @@ var editUser={
 	},
 	saveUser:function(){
 		var that = this;
-		console.log( $( '#editUserForm' ).serialize() );
 		$.post( '/api/admin/users/update.php',
-				$( '#editUserForm' ).serialize(),
+				$( '#editUserForm' ).serializeArray(),
 				function( data ){
 					data = jQuery.parseJSON( data );
 					

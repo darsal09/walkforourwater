@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-23 22:57:06
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-28 16:31:00
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\registrations.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2213255db0b17cb4c75-79158861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\registrations.tpl',
-      1 => 1443063424,
+      1 => 1443472243,
       2 => 'file',
     ),
   ),
@@ -36,6 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<th>Date</th>
 					<th>Status</th>
 					<th>Option</th>
+                    <th>Registration Email</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -208,10 +209,14 @@ var registrations={
 		$( '#addRegistrationButton' ).on( 'click', { parent:this}, this.ui.onAddRegistrationButtonClicked);
 		//this.mTable.on( 'click', 'tbody tr', { parent:this}, this.ui.onEditClicked);
         this.mTable.on('click', 'tbody tr td.more_info', { parent:this}, this.ui.onDetailClicked );
-        this.mTable.on('click', 'A', { parent:this}, this.ui.onCompletedClicked );
-
+        this.mTable.on('click', 'A#updateStatus', { parent:this}, this.ui.onCompletedClicked );
+        this.mTable.on('click', 'A#sendEmail', { parent:this}, this.ui.onSendEmailClicked );
     },
 	ui:{
+        onSendEmailClicked:function( e ){
+            e.preventDefault();
+            e.data.parent.sendEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
         onCompletedClicked:function( e ){
             e.preventDefault();
             e.data.parent.completed( $( this).data( 'rid' ), $( this).data( 'uid' ));
@@ -282,11 +287,20 @@ var registrations={
                 { "data":"status", render:function( status, type, row ){
                     var inputs = status;
                     if( status == 'Pending' ){
-                        inputs = '<a href="" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'" title="click to update the registration to completed">'+status+'</a>';
+                        inputs = '<a href="#" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'" id="updateStatus" title="click to update the registration to completed">'+status+'</a>';
                     }
                     return inputs;
                 }},
-                { "data":"type"}
+                { "data":"type"},
+                { "data": "emailed", 'render':function( rID, type, row ){
+                    var inputs = 'Sent';
+
+                    if( rID == null ){
+                        inputs = '<a href="#" id="sendEmail" data-uID="'+row.user_id+'" data-rID="'+row.register_id+'">Send Email</a>';
+                    }
+
+                    return inputs;
+                }}
             ]
         });
     },
@@ -299,11 +313,27 @@ var registrations={
                 function( data ){
                     if( data.success){
                         registrations.loadTable();
+                    }else {
+                        alert(data.message);
                     }
-                    alert( data.message );
-
                 },
                 "json");
+    },
+    sendEmail:function( rID, uID ){
+        $.post('/api/admin/registrations/registrant/sendEmail.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID
+                },
+                function( data ){
+                    if( data.success ){
+                        registrations.loadTable();
+                    }else{
+                        alert( data.message );
+                    }
+                },
+                'json'
+        );
     }
 };
 

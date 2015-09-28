@@ -3,7 +3,7 @@ class email{
 	public $mTo;
 	public $mFrom;
 	public $mMessage;
-	public $msubject;
+	public $mSubject;
 	public $mType;
 	public $mHeader;
 	
