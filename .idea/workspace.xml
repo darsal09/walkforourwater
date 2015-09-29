@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1362bb9d-6167-4388-a002-050482d8a72c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/b4ab41a98984ed03afc8bb15f4ba08f7d06c286d.file.event.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/b4ab41a98984ed03afc8bb15f4ba08f7d06c286d.file.event.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/d537764f477dfe1be41a2ab0dcb90cb56e9a39af.file.eventschedule.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/d537764f477dfe1be41a2ab0dcb90cb56e9a39af.file.eventschedule.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/public/event.tpl" afterPath="$PROJECT_DIR$/presentation/templates/public/event.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl" afterPath="$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="walkforourwater.iws" />
@@ -53,21 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="event.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/presentation/templates/public/event.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.538462" vertical-offset="796" max-vertical-offset="1360">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.66843975" vertical-offset="796" max-vertical-offset="1428">
+              <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eventschedule.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="eventschedule.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6985816" vertical-offset="320" max-vertical-offset="1649">
-              <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+            <state vertical-scroll-proportion="-6.0" vertical-offset="14" max-vertical-offset="1649">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -172,8 +170,8 @@
         <option value="$PROJECT_DIR$/api/admin/registrations/registrant/sendEmail.php" />
         <option value="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/admin/users.tpl" />
-        <option value="$PROJECT_DIR$/presentation/templates/public/event.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl" />
+        <option value="$PROJECT_DIR$/presentation/templates/public/event.tpl" />
       </list>
     </option>
   </component>
@@ -226,92 +224,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,7 +289,13 @@
       <option name="project" value="LOCAL" />
       <updated>1443567620478</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="worked on updating the maps for the event">
+      <created>1443569325835</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1443569325835</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -832,18 +750,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/public/event.tpl">
+    <entry file="file://$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.538462" vertical-offset="796" max-vertical-offset="1360">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.0" vertical-offset="14" max-vertical-offset="1649">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl">
+    <entry file="file://$PROJECT_DIR$/presentation/templates/public/event.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6985816" vertical-offset="320" max-vertical-offset="1649">
-          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.66843975" vertical-offset="796" max-vertical-offset="1428">
+          <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
           <folding />
         </state>
       </provider>

@@ -63,7 +63,11 @@
                 <h3><a href="#schedule">Schedule</a></h3>
             </div>
             <div class="panel-footer">
+                <p><a href="#signin">8:45am Walk/Run sign-in begins</a></p>
+                <p><a href="#arrive">9:30am All walkers/runner arrive</a></p>
+                <p><a href="#runners">9:50am Runner take their places</a></p>
                 <p><a href="#run">10am Run begins</a></p>
+                <p><a href="#walkers">10:20am Walkers take their places</a></p>
                 <p><a href="#walk">10:30am Walk begins</a></p>
                 <p><a href="#music">10:45am Music begins</a></p>
                 <p><a href="#bronx_leader">11:15am Bronx leader  address attendees</a></p>

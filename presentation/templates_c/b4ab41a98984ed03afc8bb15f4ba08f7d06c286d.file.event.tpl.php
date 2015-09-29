@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-29 19:21:37
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-29 19:33:15
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\public\event.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2103455eed236f1a065-42028864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b4ab41a98984ed03afc8bb15f4ba08f7d06c286d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\public\\event.tpl',
-      1 => 1443568896,
+      1 => 1443569592,
       2 => 'file',
     ),
   ),
@@ -95,7 +95,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <h3><a href="#schedule">Schedule</a></h3>
             </div>
             <div class="panel-footer">
+                <p><a href="#signin">8:45am Walk/Run sign-in begins</a></p>
+                <p><a href="#arrive">9:30am All walkers/runner arrive</a></p>
+                <p><a href="#runners">9:50am Runner take their places</a></p>
                 <p><a href="#run">10am Run begins</a></p>
+                <p><a href="#walkers">10:20am Walkers take their places</a></p>
                 <p><a href="#walk">10:30am Walk begins</a></p>
                 <p><a href="#music">10:45am Music begins</a></p>
                 <p><a href="#bronx_leader">11:15am Bronx leader  address attendees</a></p>
