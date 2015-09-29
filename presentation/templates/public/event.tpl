@@ -13,7 +13,7 @@
 			<div class="panel-footer">
 				<p>When: <b>{date('l F jS', strtotime($obj->mP[ 'date' ]))} at {date( 'H:ia', strtotime($obj->mP[ 'time' ]))}</b></p>
 				<p>Where: <a href=""></a><b>Allerton Ballfields, Bronx Park</b></a></p>
-                <iframe src="https://mapsengine.google.com/map/embed?mid=zFjlaaorFfQM.kTSGS7U_leY8" width="100%" height="480" frameborder="0"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=zFjlaaorFfQM.kTSGS7U_leY8" width="100%" height="480" frameborder="0"></iframe>
 				<p>&nbsp;</p>
 				{$obj->mP[ 'description' ]}
 			</div>
@@ -56,12 +56,20 @@
 			</div>
 			<div class="panel-footer">
 				<p>By <a href="#car">Car</a></p>
-				
-				
 				<p>By <a href="#bus">Bus</a></p>
-				
 				<p>By <a href="#train">Train</a></p>
 			</div>
+            <div class="panel-heading">
+                <h3><a href="#schedule">Schedule</a></h3>
+            </div>
+            <div class="panel-footer">
+                <p><a href="#run">10am Run begins</a></p>
+                <p><a href="#walk">10:30am Walk begins</a></p>
+                <p><a href="#music">10:45am Music begins</a></p>
+                <p><a href="#bronx_leader">11:15am Bronx leader  address attendees</a></p>
+                <p><a href="#raffle">11:45am Raffle!1 prizes given out</a></p>
+                <p><a href="#music_games">12:00pm Music and games continue</a></p>
+            </div>
 		</div>
 	</div>
 </div>

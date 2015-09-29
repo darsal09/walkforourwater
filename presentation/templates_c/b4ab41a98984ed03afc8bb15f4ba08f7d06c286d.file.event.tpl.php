@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-29 18:57:17
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-29 19:21:37
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\public\event.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2103455eed236f1a065-42028864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b4ab41a98984ed03afc8bb15f4ba08f7d06c286d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\public\\event.tpl',
-      1 => 1443567434,
+      1 => 1443568896,
       2 => 'file',
     ),
   ),
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  at <?php echo date('H:ia',strtotime($_smarty_tpl->tpl_vars['obj']->value->mP['time']));?>
 </b></p>
 				<p>Where: <a href=""></a><b>Allerton Ballfields, Bronx Park</b></a></p>
-                <iframe src="https://mapsengine.google.com/map/embed?mid=zFjlaaorFfQM.kTSGS7U_leY8" width="100%" height="480" frameborder="0"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=zFjlaaorFfQM.kTSGS7U_leY8" width="100%" height="480" frameborder="0"></iframe>
 				<p>&nbsp;</p>
 				<?php echo $_smarty_tpl->tpl_vars['obj']->value->mP['description'];?>
 
@@ -88,12 +88,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 			<div class="panel-footer">
 				<p>By <a href="#car">Car</a></p>
-				
-				
 				<p>By <a href="#bus">Bus</a></p>
-				
 				<p>By <a href="#train">Train</a></p>
 			</div>
+            <div class="panel-heading">
+                <h3><a href="#schedule">Schedule</a></h3>
+            </div>
+            <div class="panel-footer">
+                <p><a href="#run">10am Run begins</a></p>
+                <p><a href="#walk">10:30am Walk begins</a></p>
+                <p><a href="#music">10:45am Music begins</a></p>
+                <p><a href="#bronx_leader">11:15am Bronx leader  address attendees</a></p>
+                <p><a href="#raffle">11:45am Raffle!1 prizes given out</a></p>
+                <p><a href="#music_games">12:00pm Music and games continue</a></p>
+            </div>
 		</div>
 	</div>
 </div><?php }} ?>
