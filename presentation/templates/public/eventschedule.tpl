@@ -32,10 +32,20 @@
 					<div class="row even">
 						<div class="col-xs-12">
 							<span class="time">10:00 am</span>
-							Run and Walk begin
-						</div>
+							<h4>Run begins</h4>
+                            <iframe src="https://mapsengine.google.com/map/embed?mid=zFjlaaorFfQM.kMiuDox8CAOs" width="100%" height="480" frameborder="0"></iframe>
+                        </div>
 					</div>
 				</div>
+                <div class="schedule_time">
+                    <div class="row even">
+                        <div class="col-xs-12">
+                            <span class="time">10:30 am</span>
+                            <h4>Walk begins</h4>
+                            <iframe src="https://mapsengine.google.com/map/embed?mid=zFjlaaorFfQM.kvsDl5QNAqwo" width="100%" height="480" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
 				<div class="schedule_time">
 					<div class="row odd">
 						<div class="col-xs-12">

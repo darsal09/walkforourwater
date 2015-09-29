@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-25 19:33:05
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-29 18:57:17
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\public\event.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2103455eed236f1a065-42028864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b4ab41a98984ed03afc8bb15f4ba08f7d06c286d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\public\\event.tpl',
-      1 => 1443223983,
+      1 => 1443567434,
       2 => 'file',
     ),
   ),
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  at <?php echo date('H:ia',strtotime($_smarty_tpl->tpl_vars['obj']->value->mP['time']));?>
 </b></p>
 				<p>Where: <a href=""></a><b>Allerton Ballfields, Bronx Park</b></a></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.10669757204!2d-73.87586748413086!3d40.86953261055748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f36f9679aa15%3A0x8fdc6786201f0b0f!2sAllerton+Ballfieds!5e0!3m2!1sen!2sus!4v1443223665673" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://mapsengine.google.com/map/embed?mid=zFjlaaorFfQM.kTSGS7U_leY8" width="100%" height="480" frameborder="0"></iframe>
 				<p>&nbsp;</p>
 				<?php echo $_smarty_tpl->tpl_vars['obj']->value->mP['description'];?>
 

@@ -13,7 +13,7 @@
 			<div class="panel-footer">
 				<p>When: <b>{date('l F jS', strtotime($obj->mP[ 'date' ]))} at {date( 'H:ia', strtotime($obj->mP[ 'time' ]))}</b></p>
 				<p>Where: <a href=""></a><b>Allerton Ballfields, Bronx Park</b></a></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.10669757204!2d-73.87586748413086!3d40.86953261055748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f36f9679aa15%3A0x8fdc6786201f0b0f!2sAllerton+Ballfieds!5e0!3m2!1sen!2sus!4v1443223665673" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://mapsengine.google.com/map/embed?mid=zFjlaaorFfQM.kTSGS7U_leY8" width="100%" height="480" frameborder="0"></iframe>
 				<p>&nbsp;</p>
 				{$obj->mP[ 'description' ]}
 			</div>
