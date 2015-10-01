@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-28 16:31:00
+<?php /* Smarty version Smarty-3.1.8, created on 2015-09-30 21:36:56
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\registrations.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2213255db0b17cb4c75-79158861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\registrations.tpl',
-      1 => 1443472243,
+      1 => 1443663414,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_55db0b17d454f8_36120932')) {function content_55db0b17d454f8_36120932($_smarty_tpl) {?><?php if (!is_callable('smarty_function_load_presentation_object')) include 'C:\\xampp\\htdocs\\walkforourwater/presentation/smarty_plugins\\function.load_presentation_object.php';
 ?><?php echo smarty_function_load_presentation_object(array('filename'=>"registrationsController",'foldername'=>"admin",'assign'=>"obj"),$_smarty_tpl);?>
 
-<h1>Registrations</h1>
-<hr>
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-title">Registrations</h1>
+        </div>
+    </div>
+</div>
 <div class="row">
 	<div class="col-md-12">
 		<p></p><a class="btn btn-primary btn-lg" id="addRegistrationButton" href="">+Add Registration</a></p>
@@ -37,6 +42,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<th>Status</th>
 					<th>Option</th>
                     <th>Registration Email</th>
+                    <th>Options</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -211,8 +217,14 @@ var registrations={
         this.mTable.on('click', 'tbody tr td.more_info', { parent:this}, this.ui.onDetailClicked );
         this.mTable.on('click', 'A#updateStatus', { parent:this}, this.ui.onCompletedClicked );
         this.mTable.on('click', 'A#sendEmail', { parent:this}, this.ui.onSendEmailClicked );
+        this.mTable.on('click', 'A.resend_email', { parent:this}, this.ui.onResendEmailClicked );
     },
 	ui:{
+        onResendEmailClicked:function( e ){
+            e.preventDefault();
+
+            e.data.parent.resendEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
         onSendEmailClicked:function( e ){
             e.preventDefault();
             e.data.parent.sendEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
@@ -300,7 +312,13 @@ var registrations={
                     }
 
                     return inputs;
-                }}
+                }},
+                {
+                    'data':null,
+                    'render':function( nothing, type, row ){
+                        return '<a href="#" class="resend_email" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'">Re-send Email</a>';
+                    }
+                }
             ]
         });
     },
@@ -334,6 +352,19 @@ var registrations={
                 },
                 'json'
         );
+    },
+    resendEmail:function( rID, uID ){
+        $.post('/api/admin/registrations/registrant/sendEmail.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID
+                },
+                function( data ){
+                    alert( data.message );
+                },
+                'json'
+        );
+
     }
 };
 

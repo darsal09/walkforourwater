@@ -1,6 +1,11 @@
 {load_presentation_object filename="registrationsController" foldername="admin" assign="obj"}
-<h1>Registrations</h1>
-<hr>
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-title">Registrations</h1>
+        </div>
+    </div>
+</div>
 <div class="row">
 	<div class="col-md-12">
 		<p></p><a class="btn btn-primary btn-lg" id="addRegistrationButton" href="">+Add Registration</a></p>
@@ -14,6 +19,7 @@
 					<th>Status</th>
 					<th>Option</th>
                     <th>Registration Email</th>
+                    <th>Options</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -188,8 +194,14 @@ var registrations={
         this.mTable.on('click', 'tbody tr td.more_info', { parent:this}, this.ui.onDetailClicked );
         this.mTable.on('click', 'A#updateStatus', { parent:this}, this.ui.onCompletedClicked );
         this.mTable.on('click', 'A#sendEmail', { parent:this}, this.ui.onSendEmailClicked );
+        this.mTable.on('click', 'A.resend_email', { parent:this}, this.ui.onResendEmailClicked );
     },
 	ui:{
+        onResendEmailClicked:function( e ){
+            e.preventDefault();
+
+            e.data.parent.resendEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
         onSendEmailClicked:function( e ){
             e.preventDefault();
             e.data.parent.sendEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
@@ -277,7 +289,13 @@ var registrations={
                     }
 
                     return inputs;
-                }}
+                }},
+                {
+                    'data':null,
+                    'render':function( nothing, type, row ){
+                        return '<a href="#" class="resend_email" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'">Re-send Email</a>';
+                    }
+                }
             ]
         });
     },
@@ -311,6 +329,19 @@ var registrations={
                 },
                 'json'
         );
+    },
+    resendEmail:function( rID, uID ){
+        $.post('/api/admin/registrations/registrant/sendEmail.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID
+                },
+                function( data ){
+                    alert( data.message );
+                },
+                'json'
+        );
+
     }
 };
 

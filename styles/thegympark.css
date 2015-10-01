@@ -43,7 +43,7 @@ ul.nav li A{
 	padding-bottom:5px;
 	padding-left:10px;
 	border:0px;
-	background-image:url( '/images/textures/texture2.jpg');
+    color:black;
 }
 
 .navbar-right LI A{
