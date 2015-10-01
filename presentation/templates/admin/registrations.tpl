@@ -408,8 +408,6 @@ var addRegistration={
 		$.post('/api/admin/users/all.php',
 				{},
 				function( data ){
-					data = jQuery.parseJSON( data );
-					
 					if( data.success ){
 						var result = [];
 						var users = data.result;
@@ -424,7 +422,8 @@ var addRegistration={
 					}else{
 						alert( data.message );
 					}
-				}
+				},
+                'json'
 			);
 	},
     saveRegistration:function(){

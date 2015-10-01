@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1362bb9d-6167-4388-a002-050482d8a72c" name="Default" comment="worked on updating the maps for the event">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8.file.registrations.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8.file.registrations.tpl.php" />
+    <list default="true" id="1362bb9d-6167-4388-a002-050482d8a72c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" afterPath="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/thegympark.css" afterPath="$PROJECT_DIR$/styles/thegympark.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="walkforourwater.iws" />
@@ -33,8 +31,8 @@
       <file leaf-file-name="registrations.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/presentation/templates/admin/registrations.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33146068" vertical-offset="4115" max-vertical-offset="5287">
-              <caret line="408" column="8" selection-start-line="408" selection-start-column="8" selection-end-line="408" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.9044944" vertical-offset="4285" max-vertical-offset="5270">
+              <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
               <folding>
                 <element signature="n#div#2;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#!!top" expanded="false" />
@@ -398,7 +396,13 @@
       <option name="project" value="LOCAL" />
       <updated>1443569624725</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="worked on updating the maps for the event">
+      <created>1443663525300</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1443663525300</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -833,8 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/templates/admin/registrations.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33146068" vertical-offset="4115" max-vertical-offset="5287">
-          <caret line="408" column="8" selection-start-line="408" selection-start-column="8" selection-end-line="408" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.9044944" vertical-offset="4285" max-vertical-offset="5270">
+          <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
           <folding>
             <element signature="n#div#2;n#!!top" expanded="false" />
             <element signature="n#div#3;n#!!top" expanded="false" />
