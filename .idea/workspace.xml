@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1362bb9d-6167-4388-a002-050482d8a72c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8.file.registrations.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8.file.registrations.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/admin/registrations/all.php" afterPath="$PROJECT_DIR$/api/admin/registrations/all.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" afterPath="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/registrationsTable.class.php" afterPath="$PROJECT_DIR$/business/registrationsTable.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="walkforourwater.iws" />
@@ -31,12 +34,38 @@
       <file leaf-file-name="registrations.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/presentation/templates/admin/registrations.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9044944" vertical-offset="4285" max-vertical-offset="5270">
-              <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9044944" vertical-offset="4387" max-vertical-offset="7514">
+              <caret line="325" column="34" selection-start-line="325" selection-start-column="34" selection-end-line="325" selection-end-column="34" />
               <folding>
-                <element signature="n#div#2;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#div#3;n#!!top" expanded="false" />
-                <element signature="e#11882#12321#0#HTML" expanded="false" />
+                <element signature="e#13568#14007#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/admin/registrations/all.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.307693" vertical-offset="22" max-vertical-offset="459">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registrationsTable.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/registrationsTable.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="442" max-vertical-offset="1802">
+              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+              <folding>
+                <marker date="1443704897223" expanded="true" signature="130:600" placeholder="SELECT r.reg..." />
+                <marker date="1443704897223" expanded="true" signature="713:834" placeholder="INSERT INTO ..." />
+                <marker date="1443704897223" expanded="true" signature="1179:1276" placeholder="SELECT regis..registration..." />
+                <marker date="1443704897223" expanded="true" signature="1817:1952" placeholder="UPDATE regis..." />
+                <marker date="1443704897223" expanded="true" signature="2219:2324" placeholder="UPDATE regis..." />
               </folding>
             </state>
           </provider>
@@ -94,28 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/email.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="629">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="emails.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/emails.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="765">
-              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="users.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentation/templates/admin/users.tpl">
           <provider selected="true" editor-type-id="text-editor">
@@ -162,8 +169,6 @@
         <option value="$PROJECT_DIR$/business/usersTable.class.php" />
         <option value="$PROJECT_DIR$/business/users.class.php" />
         <option value="$PROJECT_DIR$/api/admin/users/all.php" />
-        <option value="$PROJECT_DIR$/business/registrationsTable.class.php" />
-        <option value="$PROJECT_DIR$/api/admin/registrations/all.php" />
         <option value="$PROJECT_DIR$/business/registrations.class.php" />
         <option value="$PROJECT_DIR$/business/email.class.php" />
         <option value="$PROJECT_DIR$/business/emails.class.php" />
@@ -172,6 +177,8 @@
         <option value="$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/public/event.tpl" />
         <option value="$PROJECT_DIR$/styles/thegympark.css" />
+        <option value="$PROJECT_DIR$/api/admin/registrations/all.php" />
+        <option value="$PROJECT_DIR$/business/registrationsTable.class.php" />
         <option value="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" />
       </list>
     </option>
@@ -402,7 +409,13 @@
       <option name="project" value="LOCAL" />
       <updated>1443663525300</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="worked on updating the maps for the event">
+      <created>1443663603604</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1443663603604</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -443,6 +456,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
@@ -475,6 +490,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1751">
           <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <marker date="1443704897223" expanded="true" signature="130:600" placeholder="SELECT r.reg..." />
+            <marker date="1443704897223" expanded="true" signature="713:834" placeholder="INSERT INTO ..." />
+            <marker date="1443704897223" expanded="true" signature="1179:1276" placeholder="SELECT regis..registration..." />
+            <marker date="1443704897223" expanded="true" signature="1817:1952" placeholder="UPDATE regis..." />
+            <marker date="1443704897223" expanded="true" signature="2219:2324" placeholder="UPDATE regis..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -497,9 +519,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1955" max-vertical-offset="6953">
           <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
           <folding>
-            <element signature="n#div#2;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#div#3;n#!!top" expanded="false" />
-            <element signature="e#11882#12321#0#HTML" expanded="false" />
+            <element signature="e#13568#14007#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -523,6 +545,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1751">
           <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <marker date="1443704897223" expanded="true" signature="130:600" placeholder="SELECT r.reg..." />
+            <marker date="1443704897223" expanded="true" signature="713:834" placeholder="INSERT INTO ..." />
+            <marker date="1443704897223" expanded="true" signature="1179:1276" placeholder="SELECT regis..registration..." />
+            <marker date="1443704897223" expanded="true" signature="1817:1952" placeholder="UPDATE regis..." />
+            <marker date="1443704897223" expanded="true" signature="2219:2324" placeholder="UPDATE regis..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -545,9 +574,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6953">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#div#2;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#div#3;n#!!top" expanded="false" />
-            <element signature="e#11882#12321#0#HTML" expanded="false" />
+            <element signature="e#13568#14007#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,6 +592,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1751">
           <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <marker date="1443704897223" expanded="true" signature="130:600" placeholder="SELECT r.reg..." />
+            <marker date="1443704897223" expanded="true" signature="713:834" placeholder="INSERT INTO ..." />
+            <marker date="1443704897223" expanded="true" signature="1179:1276" placeholder="SELECT regis..registration..." />
+            <marker date="1443704897223" expanded="true" signature="1817:1952" placeholder="UPDATE regis..." />
+            <marker date="1443704897223" expanded="true" signature="2219:2324" placeholder="UPDATE regis..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -706,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/admin/registrations/all.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2357019" vertical-offset="0" max-vertical-offset="577">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/admin/users/all.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35355285" vertical-offset="0" max-vertical-offset="577">
@@ -741,13 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/registrationsTable.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/registrations.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="341" max-vertical-offset="918">
@@ -772,7 +794,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="765">
           <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
           <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -835,14 +857,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/admin/registrations/all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.307693" vertical-offset="22" max-vertical-offset="459">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/registrationsTable.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="442" max-vertical-offset="1802">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <marker date="1443704897223" expanded="true" signature="130:600" placeholder="SELECT r.reg..." />
+            <marker date="1443704897223" expanded="true" signature="713:834" placeholder="INSERT INTO ..." />
+            <marker date="1443704897223" expanded="true" signature="1179:1276" placeholder="SELECT regis..registration..." />
+            <marker date="1443704897223" expanded="true" signature="1817:1952" placeholder="UPDATE regis..." />
+            <marker date="1443704897223" expanded="true" signature="2219:2324" placeholder="UPDATE regis..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/presentation/templates/admin/registrations.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9044944" vertical-offset="4285" max-vertical-offset="5270">
-          <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9044944" vertical-offset="4387" max-vertical-offset="7514">
+          <caret line="325" column="34" selection-start-line="325" selection-start-column="34" selection-end-line="325" selection-end-column="34" />
           <folding>
-            <element signature="n#div#2;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#div#3;n#!!top" expanded="false" />
-            <element signature="e#11882#12321#0#HTML" expanded="false" />
+            <element signature="e#13568#14007#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

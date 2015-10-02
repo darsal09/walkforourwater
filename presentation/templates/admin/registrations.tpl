@@ -9,6 +9,37 @@
 <div class="row">
 	<div class="col-md-12">
 		<p></p><a class="btn btn-primary btn-lg" id="addRegistrationButton" href="">+Add Registration</a></p>
+        <div style="background-color:#efefef;padding:5px;">
+            <form class="filters">
+                <h2>Filters</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Status</label><br/>
+                        <select class="filter" name="status">
+                            <option value="">All Statuses</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Pending">Pending</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Registration Email</label><br/>
+                        <select class="filter" name="registrations_email">
+                            <option value="">All</option>
+                            <option value="Sent">Sent</option>
+                            <option value="null">No Email</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Emails</label><br/>
+                        <select class="filter" name="emails">
+                            <option value="">All Registrations</option>
+                            <option value="have email">Valid</option>
+                            <option value="no email">Invalid</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
 		<table id="registrationsTable" class="table table-striped table-bordered table-hover table-responsive" cellspacing="0" width="100%">
 			<thead>
 				<tr>
@@ -195,8 +226,12 @@ var registrations={
         this.mTable.on('click', 'A#updateStatus', { parent:this}, this.ui.onCompletedClicked );
         this.mTable.on('click', 'A#sendEmail', { parent:this}, this.ui.onSendEmailClicked );
         this.mTable.on('click', 'A.resend_email', { parent:this}, this.ui.onResendEmailClicked );
+        $( '.filters').on( 'change', 'SELECT.filter', { parent:this}, this.ui.onFilterChange );
     },
 	ui:{
+        onFilterChange:function(){
+            e.data.parent.loadTable();
+        },
         onResendEmailClicked:function( e ){
             e.preventDefault();
 

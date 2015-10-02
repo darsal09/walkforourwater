@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-30 21:36:56
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-01 21:26:35
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\registrations.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2213255db0b17cb4c75-79158861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\registrations.tpl',
-      1 => 1443663414,
+      1 => 1443749193,
       2 => 'file',
     ),
   ),
@@ -32,6 +32,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="row">
 	<div class="col-md-12">
 		<p></p><a class="btn btn-primary btn-lg" id="addRegistrationButton" href="">+Add Registration</a></p>
+        <div style="background-color:#efefef;padding:5px;">
+            <form class="filters">
+                <h2>Filters</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Status</label><br/>
+                        <select class="filter" name="status">
+                            <option value="">All Statuses</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Pending">Pending</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Registration Email</label><br/>
+                        <select class="filter" name="registrations_email">
+                            <option value="">All</option>
+                            <option value="Sent">Sent</option>
+                            <option value="null">No Email</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Emails</label><br/>
+                        <select class="filter" name="emails">
+                            <option value="">All Registrations</option>
+                            <option value="have email">Valid</option>
+                            <option value="no email">Invalid</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
 		<table id="registrationsTable" class="table table-striped table-bordered table-hover table-responsive" cellspacing="0" width="100%">
 			<thead>
 				<tr>
@@ -218,8 +249,12 @@ var registrations={
         this.mTable.on('click', 'A#updateStatus', { parent:this}, this.ui.onCompletedClicked );
         this.mTable.on('click', 'A#sendEmail', { parent:this}, this.ui.onSendEmailClicked );
         this.mTable.on('click', 'A.resend_email', { parent:this}, this.ui.onResendEmailClicked );
+        $( '.filters').on( 'change', 'SELECT.filter', { parent:this}, this.ui.onFilterChange );
     },
 	ui:{
+        onFilterChange:function(){
+          console.log( $( '.filters').serialize() );
+        },
         onResendEmailClicked:function( e ){
             e.preventDefault();
 
@@ -431,8 +466,6 @@ var addRegistration={
 		$.post('/api/admin/users/all.php',
 				{},
 				function( data ){
-					data = jQuery.parseJSON( data );
-					
 					if( data.success ){
 						var result = [];
 						var users = data.result;
@@ -447,7 +480,8 @@ var addRegistration={
 					}else{
 						alert( data.message );
 					}
-				}
+				},
+                'json'
 			);
 	},
     saveRegistration:function(){

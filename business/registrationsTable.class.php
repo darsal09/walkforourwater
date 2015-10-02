@@ -4,7 +4,8 @@ class registrationsTable{
 		
 	}
 	
-	public static function getAll(){
+	public static function getAll( $data = [] ){
+
 		$sql = 'SELECT
 					r.register_id,
 					u.first,
