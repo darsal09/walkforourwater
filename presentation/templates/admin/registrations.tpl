@@ -45,7 +45,8 @@
 					<th>Status</th>
 					<th>Option</th>
                     <th>Registration Email</th>
-                    <th>Options</th>
+                    <th>Updated Email</th>
+                    <th>Attended</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -221,15 +222,29 @@ var registrations={
         this.mTable.on('click', 'A#updateStatus', { parent:this}, this.ui.onCompletedClicked );
         this.mTable.on('click', 'A#sendEmail', { parent:this}, this.ui.onSendEmailClicked );
         this.mTable.on('click', 'A.resend_email', { parent:this}, this.ui.onResendEmailClicked );
+        this.mTable.on('click', 'A#sendUpdateEmail', { parent:this}, this.ui.onSendUpdateEmailClicked );
+        this.mTable.on('click', 'A.resendUpdateEmail', { parent:this}, this.ui.onResendUpdateEmailClicked );
+        this.mTable.on('click', 'A.attended', { parent:this}, this.ui.onAttendedClicked );
         $( '.filters').on( 'change', 'SELECT.filter', { parent:this}, this.ui.onFilterChange );
     },
 	ui:{
+        onAttendedClicked:function( e ){
+            e.preventDefault();
+            e.data.parent.attended( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
+        onSendUpdateEmailClicked:function( e ){
+            e.preventDefault();
+            e.data.parent.sendUpdateEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
+        onResendUpdateEmailClicked:function( e ){
+            e.preventDefault();
+            e.data.parent.resendUpdateEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
         onFilterChange:function( e ){
             e.data.parent.loadTable();
         },
         onResendEmailClicked:function( e ){
             e.preventDefault();
-
             e.data.parent.resendEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
         },
         onSendEmailClicked:function( e ){
@@ -281,7 +296,7 @@ var registrations={
 		}
 	},
     displayMessage:function ( d ) {
-        return '<div class="row"><div class="col-md-12"><div class="col-md-3">Paypal Number: '+ d.paypal_receipt_id+'</div><div class="col-md-3">Donation: $'+ d.donation+'</div><div class="col-md-3"><a href="" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'">Update</a></div></div></div>';
+        return '<div class="row"><div class="col-md-12"><div class="col-md-3">Paypal Number: '+ d.paypal_receipt_id+'</div><div class="col-md-3">Donation: $'+ d.donation+'</div><div class="col-md-3"><a href="#" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary attended">Attended</a></div></div></div>';
     },
     loadTable:function(){
         if ($.fn.dataTable.isDataTable(this.mTable.selector)) {
@@ -311,6 +326,7 @@ var registrations={
                 },
                 { "data":"status", render:function( status, type, row ){
                     var inputs = status;
+
                     if( status == 'Pending' ){
                         inputs = '<a href="#" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'" id="updateStatus" title="click to update the registration to completed">'+status+'</a>';
                     }
@@ -321,15 +337,24 @@ var registrations={
                     var inputs = 'Sent';
 
                     if( rID == null ){
-                        inputs = '<a href="#" id="sendEmail" data-uID="'+row.user_id+'" data-rID="'+row.register_id+'">Send Email</a>';
+                        inputs = '<a href="#" id="sendEmail" data-uID="'+row.user_id+'" data-rID="'+row.register_id+'">Send</a>';
                     }
-
+                    if( rID != null ){
+                        inputs += ' :: <a href="#" class="resend_email" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'">Re-send</a>';
+                    }
                     return inputs;
                 }},
                 {
-                    'data':null,
-                    'render':function( nothing, type, row ){
-                        return '<a href="#" class="resend_email" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'">Re-send Email</a>';
+                    'data':'updated',
+                    'render':function( updated, type, row ){
+                        var inputs = 'Sent';
+
+                        if( updated == null ){
+                            inputs = '<a href="#" id="sendUpdateEmail" data-uID="'+row.user_id+'" data-rID="'+row.register_id+'">Send</a>';
+                        }
+                        inputs += ' :: <a href="#" class="resendUpdateEmail" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'">Re-send</a>';
+
+                        return inputs;
                     }
                 }
             ]
@@ -378,7 +403,37 @@ var registrations={
                 'json'
         );
 
+    },
+    sendUpdateEmail:function( rID, uID ){
+        $.post('/api/admin/registrations/registrant/sendUpdateEmail.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID
+                },
+                function( data ){
+                    if( data.success ){
+                        registrations.loadTable();
+                    }else{
+                        alert( data.message );
+                    }
+                },
+                'json'
+        );
+    },
+    resendUpdateEmail:function( rID, uID ){
+        $.post('/api/admin/registrations/registrant/sendUpdateEmail.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID
+                },
+                function( data ){
+                    alert( data.message );
+                },
+                'json'
+        );
     }
+
+
 };
 
 var addRegistration={

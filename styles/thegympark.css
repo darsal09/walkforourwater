@@ -194,7 +194,8 @@ DIV.odd LI, DIV.even LI{
 }
 @media screen and ( max-width:800px ){
 	.banner{
-		margin-top:-30px;
+		margin-top:-20px;
+        margin-bottom:-10px;
 	}
 	
 	.navbar img {

@@ -17,9 +17,9 @@
 	foreach( $registrations AS $registration ){
 		$name = $registration[ 'first' ];
 		$email = $registration[ 'email' ];
-		$subject = 'Walk For Our Water Update';
-			
-		
+		$subject = 'Rain or shine we will see you tomorrow at the Walk';
+
+
 		$headers = 'From: Walk For Our Water < info@walkforourwater.org >' . "\r\n" .
 				"To: $name < $email >"."\r\n" .
 				'Reply-To: info@walkforourwater.org' . "\r\n" .
@@ -28,14 +28,14 @@
 				'Content-type: text/html; charset=iso-8859-1' ."\r\n";
 
 		$registration[ 'startTime' ] = '10am';
-		
+
 		$message = emailMessages::updateRegistration( $registration );
-		
+
 		$emailLayout = emailTemplates::header().emailTemplates::body( $message ).emailTemplates::footer();
-		print_r( $emailLayout );
+
 		if( mail( $email, $subject, $emailLayout, $headers ) ){
 			$result = registrationsEmailsTable::updateSent( $registration );
-			print_r( $result );
+			print_r( $registration );
 			echo 'email sent'.PHP_EOL;
 		}else{
 			echo 'Could not send email'.PHP_EOL;

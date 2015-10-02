@@ -17,11 +17,14 @@ class registrationsTable{
 					r.user_id,
 					r.paypal_receipt_id,
 					r.cost AS donation,
-					re.id AS emailed
+					re.id AS emailed,
+					updated.id AS updated
 				FROM registration r
 				LEFT JOIN users u on u.user_id = r.user_id
 				LEFT JOIN events e on e.event_id = r.event_id
 				LEFT JOIN registrations_emails re on re.registration_id = r.register_id AND re.type = "New"
+				LEFT JOIN registrations_emails updated on updated.registration_id = r.register_id AND updated.type = "Update"
+                GROUP BY r.user_id
 				ORDER BY r.added_on, r.modefied_on DESC';
 		
 		return databaseHandler::getAll( $sql );
