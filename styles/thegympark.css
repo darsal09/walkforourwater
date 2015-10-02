@@ -140,6 +140,14 @@ DIV.odd LI, DIV.even LI{
 	padding:10px;
 }
 
+.admin_menu DIV{
+    width:100%;
+    background-color:#efefef;
+    margin-top:3px;
+    margin-bottom:3px;
+    padding:5px;
+    border:1px solid #efefef;
+}
 
 @media screen and (min-width:1000px){
 	.buttons{

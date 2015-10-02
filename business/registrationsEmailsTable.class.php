@@ -24,8 +24,11 @@ class registrationsEmailsTable{
 	}
 	
 	public static function updateSent( $data ){
-		
-		return databaseHandler::Execute( 'CALL wfow_add_registrations_emails( :userID, :registrationID, :eventID, :type )', [
+		$sql = 'INSERT INTO
+                registrations_emails( user_id, registration_id, event_id, type)
+		        VALUES( :userID, :registrationID, :eventID, :type )';
+
+		return databaseHandler::Execute( $sql, [
 			':userID' => $data[ 'user_id' ],
 			':registrationID' => $data[ 'register_id' ],
 			':eventID' => $data[ 'event_id' ],

@@ -62,7 +62,42 @@ class emailMessages{
 					<p>Thank you for your donation. Your $'.$amount.' will help keep the bronx river clean.</p>
 				';
 	}
-	
+    public static function updateRegistration( $data = [] ){
+        $eventID 		= $data[ 'event_id' ];
+        $startTime		= $data[ 'startTime' ];
+        $name  			= $data[ 'first' ];
+        $location 		= 'the Allerton Ballfields in the Bronx Park';
+        $mapLink 		= 'https://www.google.com/maps/dir/40.8699483,-73.8760044/40.8699402,-73.875865/@40.8691633,-73.8761385,18z';
+        $facebookLink 	= 'https://www.facebook.com/walkforourwater?ref=hl';
+
+        $result = '	<h3>Dear '.$name.',</h3>
+							<p style="font-size:17px;">
+								We may be blessed with some water for our Walk tomorrow, Saturday Oct. 3rd, and it may be perfect weather to celebrate our water.  Here is a quick update.
+							</p>
+							<p style="font-size:17px;">
+								The event will be held tomorrow, rain or shine. We are continuing to watch the weather closely.
+								Currently, there are possible showers with some wind during the walk. Please make sure to dress warmly and bring your raincoat.
+								We will have snacks for walkers and runners, but please bring your own water bottles. There are fountains along the walk to refill your bottle, and we will have a water cooler at the end of the walk as well.
+								 As before, please arrive at 9:30am  to sign in and claim your raffle tickets.
+								The Walk (and Run) starts at the entrance to '.$location.' promptly at '.$startTime. '
+								See the <a href="https://walkforourwater.org/events/'.$eventID.'" target="_blank">event schedule</a> for more information.
+							</p>
+							<!-- Callout Panel -->
+							<p style="padding:15px; background-color:#ECF8FF; margin-bottom: 15px;">
+								<a href="https://walkforourwater.org/events/'.$eventID.'/directions" target="_blank">Click here</a> for details on how to get to '.$location.'.
+								Click <a href="'.$mapLink.'" target="_blank">link to map</a>.
+								check out our <a href="'.$facebookLink.'" target="_blank">FB page </a>.
+							</p><!-- /Callout Panel -->
+							<p>
+								We look forward to seeing you tomorrow, Saturday!
+							</p>
+							<p>
+								Sincerely, Nicole and the Walk for Our Water Team
+							</p>';
+
+        return $result;
+    }
+
 }
 
 

@@ -1,11 +1,4 @@
 {load_presentation_object filename="registrationsController" foldername="admin" assign="obj"}
-<div class="page-header">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="page-title">Registrations</h1>
-        </div>
-    </div>
-</div>
 <div class="row">
 	<div class="col-md-12">
 		<p></p><a class="btn btn-primary btn-lg" id="addRegistrationButton" href="">+Add Registration</a></p>
@@ -15,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label>Status</label><br/>
-                        <select class="filter" name="status">
+                        <select class="filter form-control" name="status">
                             <option value="">All Statuses</option>
                             <option value="Completed">Completed</option>
                             <option value="Pending">Pending</option>
@@ -23,7 +16,7 @@
                     </div>
                     <div class="col-md-4">
                         <label>Registration Email</label><br/>
-                        <select class="filter" name="registrations_email">
+                        <select class="filter form-control" name="registrations_email">
                             <option value="">All</option>
                             <option value="Sent">Sent</option>
                             <option value="null">No Email</option>
@@ -31,15 +24,17 @@
                     </div>
                     <div class="col-md-4">
                         <label>Emails</label><br/>
-                        <select class="filter" name="emails">
+                        <select class="filter form-control" name="emails">
                             <option value="">All Registrations</option>
-                            <option value="have email">Valid</option>
-                            <option value="no email">Invalid</option>
+                            <option value="valid">Valid</option>
+                            <option value="invalid">Invalid</option>
                         </select>
                     </div>
+                    <p>&nbsp;</p>
                 </div>
             </form>
         </div>
+        <p>&nbsp;</p>
 		<table id="registrationsTable" class="table table-striped table-bordered table-hover table-responsive" cellspacing="0" width="100%">
 			<thead>
 				<tr>
@@ -229,7 +224,7 @@ var registrations={
         $( '.filters').on( 'change', 'SELECT.filter', { parent:this}, this.ui.onFilterChange );
     },
 	ui:{
-        onFilterChange:function(){
+        onFilterChange:function( e ){
             e.data.parent.loadTable();
         },
         onResendEmailClicked:function( e ){
@@ -295,7 +290,13 @@ var registrations={
         }
 
         this.mTable.DataTable({
-            "ajax": "/api/admin/registrations/all.php",
+            "ajax": {
+                "url": "/api/admin/registrations/all.php",
+                "type": 'POST',
+                "data":{
+                    filters:$( '.filters').serializeArray()
+                }
+            },
             "columns": [
                 { "data": "register_id", 'className':'more_info'},
 

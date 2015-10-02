@@ -19,14 +19,14 @@
 	</head>
 	<body>
 			{include file="public/nmenu.tpl"}
-			<div class="container">
-				<div class="col-md-3">
+            <div class="row" style="background:black;">
+				<div class="col-md-2">
 					{include file="admin/dashboardMenu.tpl"}
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-10" style="background:white;">
 					{include file=$obj->mContent}
 				</div>
-			</div>
+            </div>
 	</body>
 	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js"></script>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-09-28 12:47:41
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-01 23:14:36
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\users.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1594355db0b13cb8af7-51779690%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c0a14c17b989e11677746428b702741bb68e68c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\users.tpl',
-      1 => 1443458851,
+      1 => 1443472408,
       2 => 'file',
     ),
   ),
@@ -199,7 +199,7 @@ var users ={
 		
 	},
 	getUser:function( user ){
-		var result = {};
+		var result = [];
 		
 		for( var x in user ){
 			result[ user[ x ].name] = user[ x ].value;

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-01 21:26:35
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-01 23:13:41
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\registrations.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2213255db0b17cb4c75-79158861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\registrations.tpl',
-      1 => 1443749193,
+      1 => 1443755619,
       2 => 'file',
     ),
   ),
@@ -22,13 +22,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_55db0b17d454f8_36120932')) {function content_55db0b17d454f8_36120932($_smarty_tpl) {?><?php if (!is_callable('smarty_function_load_presentation_object')) include 'C:\\xampp\\htdocs\\walkforourwater/presentation/smarty_plugins\\function.load_presentation_object.php';
 ?><?php echo smarty_function_load_presentation_object(array('filename'=>"registrationsController",'foldername'=>"admin",'assign'=>"obj"),$_smarty_tpl);?>
 
-<div class="page-header">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="page-title">Registrations</h1>
-        </div>
-    </div>
-</div>
 <div class="row">
 	<div class="col-md-12">
 		<p></p><a class="btn btn-primary btn-lg" id="addRegistrationButton" href="">+Add Registration</a></p>
@@ -38,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="row">
                     <div class="col-md-4">
                         <label>Status</label><br/>
-                        <select class="filter" name="status">
+                        <select class="filter form-control" name="status">
                             <option value="">All Statuses</option>
                             <option value="Completed">Completed</option>
                             <option value="Pending">Pending</option>
@@ -46,7 +39,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                     <div class="col-md-4">
                         <label>Registration Email</label><br/>
-                        <select class="filter" name="registrations_email">
+                        <select class="filter form-control" name="registrations_email">
                             <option value="">All</option>
                             <option value="Sent">Sent</option>
                             <option value="null">No Email</option>
@@ -54,15 +47,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                     <div class="col-md-4">
                         <label>Emails</label><br/>
-                        <select class="filter" name="emails">
+                        <select class="filter form-control" name="emails">
                             <option value="">All Registrations</option>
-                            <option value="have email">Valid</option>
-                            <option value="no email">Invalid</option>
+                            <option value="valid">Valid</option>
+                            <option value="invalid">Invalid</option>
                         </select>
                     </div>
+                    <p>&nbsp;</p>
                 </div>
             </form>
         </div>
+        <p>&nbsp;</p>
 		<table id="registrationsTable" class="table table-striped table-bordered table-hover table-responsive" cellspacing="0" width="100%">
 			<thead>
 				<tr>
@@ -252,8 +247,8 @@ var registrations={
         $( '.filters').on( 'change', 'SELECT.filter', { parent:this}, this.ui.onFilterChange );
     },
 	ui:{
-        onFilterChange:function(){
-          console.log( $( '.filters').serialize() );
+        onFilterChange:function( e ){
+            e.data.parent.loadTable();
         },
         onResendEmailClicked:function( e ){
             e.preventDefault();
@@ -318,7 +313,13 @@ var registrations={
         }
 
         this.mTable.DataTable({
-            "ajax": "/api/admin/registrations/all.php",
+            "ajax": {
+                "url": "/api/admin/registrations/all.php",
+                "type": 'POST',
+                "data":{
+                    filters:$( '.filters').serializeArray()
+                }
+            },
             "columns": [
                 { "data": "register_id", 'className':'more_info'},
 
