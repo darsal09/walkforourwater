@@ -46,7 +46,6 @@
 					<th>Option</th>
                     <th>Registration Email</th>
                     <th>Updated Email</th>
-                    <th>Attended</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -296,7 +295,17 @@ var registrations={
 		}
 	},
     displayMessage:function ( d ) {
-        return '<div class="row"><div class="col-md-12"><div class="col-md-3">Paypal Number: '+ d.paypal_receipt_id+'</div><div class="col-md-3">Donation: $'+ d.donation+'</div><div class="col-md-3"><a href="#" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary attended">Attended</a></div></div></div>';
+        var inputs =  '<div class="row"><div class="col-md-12">';
+        if(d.donation > 0){
+            inputs +=  '<div class="col-md-3">Paypal Number: '+ d.paypal_receipt_id+'</div>';
+        }
+        inputs += '<div class="col-md-3">Donation: $'+ d.donation+'</div>';
+        if(d.attended == 0){
+            inputs += '<div class="col-md-3"><a href="#" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary attended">Attended</a></div>';
+        }
+        inputs += '</div></div>';
+
+        return inputs;
     },
     loadTable:function(){
         if ($.fn.dataTable.isDataTable(this.mTable.selector)) {
@@ -428,6 +437,23 @@ var registrations={
                 },
                 function( data ){
                     alert( data.message );
+                },
+                'json'
+        );
+    },
+    attended:function( rID, uID ){
+        var that = this;
+        $.post('/api/admin/registrations/registrant/attended.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID
+                },
+                function( data ){
+                    if( data.success ){
+                        that.loadTable();
+                    }else{
+                        alert( data.message );
+                    }
                 },
                 'json'
         );

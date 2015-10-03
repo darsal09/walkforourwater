@@ -18,7 +18,8 @@ class registrationsTable{
 					r.paypal_receipt_id,
 					r.cost AS donation,
 					re.id AS emailed,
-					updated.id AS updated
+					updated.id AS updated,
+					r.attended
 				FROM registration r
 				LEFT JOIN users u on u.user_id = r.user_id
 				LEFT JOIN events e on e.event_id = r.event_id
@@ -88,6 +89,7 @@ class registrationsTable{
 	}
 	
 	public static function updateStatus( $data = []){
+
 		$sql = 'UPDATE
 				registration
 				SET status = :status, modefied_on = NOW()
@@ -99,6 +101,17 @@ class registrationsTable{
 											]);			
 	}
 
+    public static function attended( $data = [] ){
+        $sql = 'UPDATE
+                registration
+                SET attended = :attended
+                WHERE register_id = :registerID';
+
+        return databaseHandler::Execute( $sql, [
+                                                ':attended' => 1,
+                                                ':registerID' => $data[ 'registerID']
+                                        ]);
+    }
 
 }
 ?>

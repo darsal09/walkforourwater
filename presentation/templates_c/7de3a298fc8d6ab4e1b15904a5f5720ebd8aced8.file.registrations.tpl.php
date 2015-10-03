@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-02 17:18:47
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-02 20:16:48
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\registrations.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2213255db0b17cb4c75-79158861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\registrations.tpl',
-      1 => 1443820725,
+      1 => 1443831400,
       2 => 'file',
     ),
   ),
@@ -69,7 +69,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<th>Option</th>
                     <th>Registration Email</th>
                     <th>Updated Email</th>
-                    <th>Attended</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -247,10 +246,15 @@ var registrations={
         this.mTable.on('click', 'A.resend_email', { parent:this}, this.ui.onResendEmailClicked );
         this.mTable.on('click', 'A#sendUpdateEmail', { parent:this}, this.ui.onSendUpdateEmailClicked );
         this.mTable.on('click', 'A.resendUpdateEmail', { parent:this}, this.ui.onResendUpdateEmailClicked );
+        this.mTable.on('click', 'A.attended', { parent:this}, this.ui.onAttendedClicked );
         $( '.filters').on( 'change', 'SELECT.filter', { parent:this}, this.ui.onFilterChange );
     },
 	ui:{
-        onResendUpdateEmailClicked:function( e ){
+        onAttendedClicked:function( e ){
+            e.preventDefault();
+            e.data.parent.attended( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
+        onSendUpdateEmailClicked:function( e ){
             e.preventDefault();
             e.data.parent.sendUpdateEmail( $( this).data( 'rid' ), $( this).data( 'uid' ) );
         },
@@ -314,7 +318,17 @@ var registrations={
 		}
 	},
     displayMessage:function ( d ) {
-        return '<div class="row"><div class="col-md-12"><div class="col-md-3">Paypal Number: '+ d.paypal_receipt_id+'</div><div class="col-md-3">Donation: $'+ d.donation+'</div><div class="col-md-3"><a href="" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary">Attended</a></div></div></div>';
+        var inputs =  '<div class="row"><div class="col-md-12">';
+        if(d.donation > 0){
+            inputs +=  '<div class="col-md-3">Paypal Number: '+ d.paypal_receipt_id+'</div>';
+        }
+        inputs += '<div class="col-md-3">Donation: $'+ d.donation+'</div>';
+        if(d.attended == 0){
+            inputs += '<div class="col-md-3"><a href="#" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary attended">Attended</a></div>';
+        }
+        inputs += '</div></div>';
+
+        return inputs;
     },
     loadTable:function(){
         if ($.fn.dataTable.isDataTable(this.mTable.selector)) {
@@ -446,6 +460,23 @@ var registrations={
                 },
                 function( data ){
                     alert( data.message );
+                },
+                'json'
+        );
+    },
+    attended:function( rID, uID ){
+        var that = this;
+        $.post('/api/admin/registrations/registrant/attended.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID
+                },
+                function( data ){
+                    if( data.success ){
+                        that.loadTable();
+                    }else{
+                        alert( data.message );
+                    }
                 },
                 'json'
         );
