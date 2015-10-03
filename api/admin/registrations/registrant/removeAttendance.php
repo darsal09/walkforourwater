@@ -8,16 +8,14 @@
 	$data = sanitize::filterInputs( 'POST', [
 												'register_id' => FILTER_SANITIZE_NUMBER_INT,
                                                 'user_id' => FILTER_SANITIZE_NUMBER_INT,
-                                                'quantity' => FILTER_SANITIZE_NUMBER_INT,
 	                                ] );
 
-    $results = registrationsTable::attended( [
+    $results = registrationsTable::removeAttendance( [
                                                 'registerID' => $data['register_id' ],
-                                                'quantity' => $data[ 'quantity' ],
                                                 ] );
 
-    $result = [ 'success' =>  true, 'message'  => 'Attendance added to the system'];
+    $result = [ 'success' =>  true, 'message'  => 'attendance removed'];
     if( !$results[ 'success']){
-        $result = [ 'success' => false, 'message' => 'Cannot add attendance to the system'];
+        $result = [ 'success' => false, 'message' => 'Cannot remove attendance in the system'];
     }
     return print_r( json_encode( $result ) );

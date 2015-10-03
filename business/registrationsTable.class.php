@@ -19,7 +19,8 @@ class registrationsTable{
 					r.cost AS donation,
 					re.id AS emailed,
 					updated.id AS updated,
-					r.attended
+					r.attended,
+					r.quantity
 				FROM registration r
 				LEFT JOIN users u on u.user_id = r.user_id
 				LEFT JOIN events e on e.event_id = r.event_id
@@ -104,14 +105,36 @@ class registrationsTable{
     public static function attended( $data = [] ){
         $sql = 'UPDATE
                 registration
-                SET attended = :attended
+                SET attended = :attended, quantity = :quantity
                 WHERE register_id = :registerID';
 
         return databaseHandler::Execute( $sql, [
                                                 ':attended' => 1,
+                                                ':quantity' => $data[ 'quantity'],
                                                 ':registerID' => $data[ 'registerID']
                                         ]);
     }
 
+    public static function changeQuantity( $data = [] ){
+        $sql = 'UPDATE
+                registration
+                SET quantity = :quantity
+                WHERE register_id = :registerID';
+
+        return databaseHandler::Execute( $sql, [
+            ':quantity' => $data[ 'quantity'],
+            ':registerID' => $data[ 'registerID']
+        ]);
+    }
+
+    public static function removeAttendance( $data = [] ){
+        $sql = 'UPDATE
+                registration
+                SET quantity = 1, attended = 0
+                WHERE register_id = :registerID';
+
+        return databaseHandler::Execute( $sql, [
+            ':registerID' => $data[ 'registerID']
+        ]);
+    }
 }
-?>

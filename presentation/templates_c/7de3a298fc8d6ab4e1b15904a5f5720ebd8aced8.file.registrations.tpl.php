@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-02 20:16:48
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-02 22:06:36
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\registrations.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2213255db0b17cb4c75-79158861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\registrations.tpl',
-      1 => 1443831400,
+      1 => 1443837994,
       2 => 'file',
     ),
   ),
@@ -69,6 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<th>Option</th>
                     <th>Registration Email</th>
                     <th>Updated Email</th>
+                    <th>Quantity</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -239,7 +240,6 @@ var registrations={
 	},
 	events:function(){
 		$( '#addRegistrationButton' ).on( 'click', { parent:this}, this.ui.onAddRegistrationButtonClicked);
-		//this.mTable.on( 'click', 'tbody tr', { parent:this}, this.ui.onEditClicked);
         this.mTable.on('click', 'tbody tr td.more_info', { parent:this}, this.ui.onDetailClicked );
         this.mTable.on('click', 'A#updateStatus', { parent:this}, this.ui.onCompletedClicked );
         this.mTable.on('click', 'A#sendEmail', { parent:this}, this.ui.onSendEmailClicked );
@@ -247,12 +247,22 @@ var registrations={
         this.mTable.on('click', 'A#sendUpdateEmail', { parent:this}, this.ui.onSendUpdateEmailClicked );
         this.mTable.on('click', 'A.resendUpdateEmail', { parent:this}, this.ui.onResendUpdateEmailClicked );
         this.mTable.on('click', 'A.attended', { parent:this}, this.ui.onAttendedClicked );
+        this.mTable.on('click', 'A.changeQuantity', { parent:this}, this.ui.onChangeQuantityClicked );
+        this.mTable.on('click', 'A.removeAttendance', { parent:this}, this.ui.onRemoveAttendanceClicked );
         $( '.filters').on( 'change', 'SELECT.filter', { parent:this}, this.ui.onFilterChange );
     },
 	ui:{
+        onRemoveAttendanceClicked:function( e  ){
+            e.preventDefault();
+            e.data.parent.removeAttendance( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+        },
+        onChangeQuantityClicked:function( e ){
+            e.preventDefault();
+            e.data.parent.changeQuantity( $( this).data( 'rid' ), $( this).data( 'uid' ), $( this).closest( 'form').serialize() );
+        },
         onAttendedClicked:function( e ){
             e.preventDefault();
-            e.data.parent.attended( $( this).data( 'rid' ), $( this).data( 'uid' ) );
+            e.data.parent.attended( $( this).data( 'rid' ), $( this).data( 'uid' ), $( this ).closest( 'form').serialize() );
         },
         onSendUpdateEmailClicked:function( e ){
             e.preventDefault();
@@ -324,7 +334,9 @@ var registrations={
         }
         inputs += '<div class="col-md-3">Donation: $'+ d.donation+'</div>';
         if(d.attended == 0){
-            inputs += '<div class="col-md-3"><a href="#" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary attended">Attended</a></div>';
+            inputs += '<div class="col-md-3"><form><input type="number" name="quantity" value="'+ d.quantity+'"><a href="#" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary attended">Attended</a></form></div>';
+        }else{
+            inputs += '<div class="col-md-3"><form><input type="number" name="quantity" value="'+ d.quantity+'"><a href="#" data-rID="'+ d.register_id+'" data-uID="'+ d.user_id+'" class="btn btn-primary changeQuantity">Change Quantity</a></form></div>';
         }
         inputs += '</div></div>';
 
@@ -385,6 +397,18 @@ var registrations={
                             inputs = '<a href="#" id="sendUpdateEmail" data-uID="'+row.user_id+'" data-rID="'+row.register_id+'">Send</a>';
                         }
                         inputs += ' :: <a href="#" class="resendUpdateEmail" data-rID="'+row.register_id+'" data-uID="'+row.user_id+'">Re-send</a>';
+
+                        return inputs;
+                    }
+                },
+                {
+                    'data':'quantity',
+                    'render':function( quantity, type, row ){
+                        var inputs = quantity;
+
+                        if( row.attended == 1 ){
+                            inputs += ' :: <a href="#" class="removeAttendance" data-uID="'+row.user_id+'" data-rID="'+row.register_id+'">Remove</a>';
+                        }
 
                         return inputs;
                     }
@@ -464,9 +488,47 @@ var registrations={
                 'json'
         );
     },
-    attended:function( rID, uID ){
+    attended:function( rID, uID, quantity ){
         var that = this;
         $.post('/api/admin/registrations/registrant/attended.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID,
+                    'quantity':quantity
+
+                },
+                function( data ){
+                    if( data.success ){
+                        that.loadTable();
+                    }else{
+                        alert( data.message );
+                    }
+                },
+                'json'
+        );
+    },
+    changeQuantity:function( rID, uID, quantity ){
+        var that = this;
+        $.post('/api/admin/registrations/registrant/changeQuantity.php',
+                {
+                    'user_id':uID,
+                    'register_id':rID,
+                    'quantity':quantity
+
+                },
+                function( data ){
+                    if( data.success ){
+                        that.loadTable();
+                    }else{
+                        alert( data.message );
+                    }
+                },
+                'json'
+        );
+    },
+    removeAttendance:function( rID, uID ){
+        var that = this;
+        $.post('/api/admin/registrations/registrant/removeAttendance.php',
                 {
                     'user_id':uID,
                     'register_id':rID
@@ -481,8 +543,6 @@ var registrations={
                 'json'
         );
     }
-
-
 };
 
 var addRegistration={

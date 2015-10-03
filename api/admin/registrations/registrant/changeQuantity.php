@@ -11,13 +11,13 @@
                                                 'quantity' => FILTER_SANITIZE_NUMBER_INT,
 	                                ] );
 
-    $results = registrationsTable::attended( [
+    $results = registrationsTable::changeQuantity( [
                                                 'registerID' => $data['register_id' ],
                                                 'quantity' => $data[ 'quantity' ],
                                                 ] );
 
-    $result = [ 'success' =>  true, 'message'  => 'Attendance added to the system'];
+    $result = [ 'success' =>  true, 'message'  => 'Quantity of attendees changed'];
     if( !$results[ 'success']){
-        $result = [ 'success' => false, 'message' => 'Cannot add attendance to the system'];
+        $result = [ 'success' => false, 'message' => 'Cannot change quantity in the system'];
     }
     return print_r( json_encode( $result ) );
