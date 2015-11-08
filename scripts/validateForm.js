@@ -1,5 +1,5 @@
 var validateForm={
-	init:function( formID, required = []){
+	init:function( formID, required){
 		
 		this.formID = formID;
 		this.required = required;

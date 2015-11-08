@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1362bb9d-6167-4388-a002-050482d8a72c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/admin/registrations/registrant/changeQuantity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/admin/registrations/registrant/removeAttendance.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8.file.registrations.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/7de3a298fc8d6ab4e1b15904a5f5720ebd8aced8.file.registrations.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/admin/registrations/registrant/attended.php" afterPath="$PROJECT_DIR$/api/admin/registrations/registrant/attended.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" afterPath="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/registrationsTable.class.php" afterPath="$PROJECT_DIR$/business/registrationsTable.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/cd01bb62cfe3b4881b1caec2363753eecf3ed2d1.file.nmain.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/cd01bb62cfe3b4881b1caec2363753eecf3ed2d1.file.nmain.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/e0c7be88654e305195c7828c50057ebbce1d445c.file.main.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/e0c7be88654e305195c7828c50057ebbce1d445c.file.main.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/admin/main.tpl" afterPath="$PROJECT_DIR$/presentation/templates/admin/main.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/public/nfeature.tpl" afterPath="$PROJECT_DIR$/presentation/templates/public/nfeature.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/public/nmain.tpl" afterPath="$PROJECT_DIR$/presentation/templates/public/nmain.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/thegympark.css" afterPath="$PROJECT_DIR$/styles/thegympark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/validateForm.js" afterPath="$PROJECT_DIR$/scripts/validateForm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="walkforourwater.iws" />
@@ -33,47 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="registrations.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registrations.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentation/templates/admin/registrations.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6028369" vertical-offset="5321" max-vertical-offset="7276">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="6562" max-vertical-offset="10982">
               <caret line="386" column="69" selection-start-line="386" selection-start-column="69" selection-end-line="386" selection-end-column="69" />
-              <folding>
-                <element signature="e#10734#10870#0#HTML" expanded="false" />
-                <element signature="e#10920#11058#0#HTML" expanded="false" />
-                <element signature="e#11096#11146#0#HTML" expanded="false" />
-                <element signature="e#11190#11322#0#HTML" expanded="false" />
-                <element signature="e#11364#11494#0#HTML" expanded="false" />
-                <element signature="e#11536#11666#0#HTML" expanded="false" />
-                <element signature="e#11704#12264#0#HTML" expanded="false" />
-                <element signature="e#12295#12602#0#HTML" expanded="false" />
-                <element signature="e#12650#12705#0#HTML" expanded="false" />
-                <element signature="e#16702#17141#0#HTML" expanded="false" />
-                <element signature="e#17177#17636#0#HTML" expanded="false" />
-                <element signature="e#17674#17990#0#HTML" expanded="false" />
-                <element signature="e#18032#18497#0#HTML" expanded="false" />
-                <element signature="e#20546#23706#0#HTML" expanded="false" />
-                <element signature="e#23730#23941#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="removeAttendance.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/removeAttendance.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="442">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changeQuantity.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/changeQuantity.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="476">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -82,7 +47,7 @@
       <file leaf-file-name="attended.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/attended.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="476">
+            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="476">
               <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
               <folding />
             </state>
@@ -92,7 +57,7 @@
       <file leaf-file-name="registrationsTable.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/business/registrationsTable.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.884615" vertical-offset="1820" max-vertical-offset="2465">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1820" max-vertical-offset="2465">
               <caret line="139" column="1" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
               <folding>
                 <marker date="1443837624877" expanded="true" signature="130:811" placeholder="SELECT r.reg..." />
@@ -109,25 +74,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nmain.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nmain.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/presentation/templates/public/nmain.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="765">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.26343155" vertical-offset="52" max-vertical-offset="629">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nmenu.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presentation/templates/public/nmenu.tpl">
+      <file leaf-file-name="users.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/presentation/templates/admin/users.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="493">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.615385" vertical-offset="2581" max-vertical-offset="6103">
+              <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validateForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/validateForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nfeature.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/presentation/templates/public/nfeature.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="153">
+              <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,31 +119,19 @@
       <file leaf-file-name="thegympark.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/thegympark.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.413793" vertical-offset="3134" max-vertical-offset="5151">
-              <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2372" max-vertical-offset="5219">
+              <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emails.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/emails.class.php">
+      <file leaf-file-name="main.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/presentation/templates/admin/main.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.346154" vertical-offset="403" max-vertical-offset="1156">
-              <caret line="43" column="70" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="70" />
+            <state vertical-scroll-proportion="-10.423077" vertical-offset="86" max-vertical-offset="731">
+              <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendUpdateEmail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/sendUpdateEmail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.461538" vertical-offset="31" max-vertical-offset="663">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-              <folding>
-                <element signature="e#6#88#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -195,16 +167,12 @@
         <option value="$PROJECT_DIR$/presentation/templates/admin/users.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/public/event.tpl" />
-        <option value="$PROJECT_DIR$/presentation/templates/admin/main.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl" />
         <option value="$PROJECT_DIR$/business/registrationsEmailsTable.class.php" />
         <option value="$PROJECT_DIR$/business/registrations.class.php" />
         <option value="$PROJECT_DIR$/business/emailMessages.class.php" />
         <option value="$PROJECT_DIR$/api/admin/registrations/registrant/sendUpdateEmail.php" />
         <option value="$PROJECT_DIR$/api/admin/registrations/all.php" />
-        <option value="$PROJECT_DIR$/styles/thegympark.css" />
-        <option value="$PROJECT_DIR$/presentation/templates/public/nfeature.tpl" />
-        <option value="$PROJECT_DIR$/presentation/templates/public/nmain.tpl" />
         <option value="$PROJECT_DIR$/business/emails.class.php" />
         <option value="$PROJECT_DIR$/crons/registrations/update.php" />
         <option value="$PROJECT_DIR$/api/admin/registrations/registrant/attended.php" />
@@ -212,6 +180,12 @@
         <option value="$PROJECT_DIR$/api/admin/registrations/registrant/removeAttendance.php" />
         <option value="$PROJECT_DIR$/business/registrationsTable.class.php" />
         <option value="$PROJECT_DIR$/presentation/templates/admin/registrations.tpl" />
+        <option value="$PROJECT_DIR$/presentation/templates/public/nmain.tpl" />
+        <option value="$PROJECT_DIR$/presentation/templates/public/nfeature.tpl" />
+        <option value="$PROJECT_DIR$/scripts/validateForms.js" />
+        <option value="$PROJECT_DIR$/scripts/validateForm.js" />
+        <option value="$PROJECT_DIR$/presentation/templates/admin/main.tpl" />
+        <option value="$PROJECT_DIR$/styles/thegympark.css" />
       </list>
     </option>
   </component>
@@ -248,6 +222,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,79 +251,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registrations" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,78 +266,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkforourwater" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registrant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,21 +384,26 @@
       <option name="project" value="LOCAL" />
       <updated>1443832898541</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="worked on creating a functionality to send update emails to attendees">
+      <created>1443838523940</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1443838523940</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20954692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21601942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1933439" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -571,6 +412,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -606,34 +448,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/messages.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="1190">
-          <caret line="41" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1921">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56271183" vertical-offset="1589" max-vertical-offset="5474">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testing/testPassword.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26516464" vertical-offset="0" max-vertical-offset="577">
@@ -781,19 +595,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/users.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="6103">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1292">
           <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="1649">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,18 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="796" max-vertical-offset="1428">
           <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/main.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.884615" vertical-offset="86" max-vertical-offset="731">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,10 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8076925" vertical-offset="222" max-vertical-offset="799">
           <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <marker date="1443790870335" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1443790870335" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -839,13 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.692308" vertical-offset="611" max-vertical-offset="1224">
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <marker date="1443794328196" expanded="true" signature="-1:-1" placeholder="SELECT u.use..registration..." />
-            <marker date="1443794328196" expanded="true" signature="-1:-1" placeholder="SELECT u.use..registration..." />
-            <marker date="1443794328196" expanded="true" signature="-1:-1" placeholder="SELECT u.use..registrations_emails..." />
-            <marker date="1443794328196" expanded="true" signature="-1:-1" placeholder="SELECT regis..registrations_emails..." />
-            <marker date="1443794328196" expanded="true" signature="-1:-1" placeholder="SELECT regis..registrations_emails..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,27 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.115385" vertical-offset="1221" max-vertical-offset="1853">
           <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-          <folding>
-            <marker date="1443794701421" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1443794701421" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -881,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="255">
           <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,9 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8652482" vertical-offset="73" max-vertical-offset="663">
           <caret line="33" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,34 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="459">
           <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/public/nfeature.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/public/main.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/public/nmain.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="765">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -942,31 +669,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/thegympark.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.413793" vertical-offset="3134" max-vertical-offset="5151">
-          <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/sendUpdateEmail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.461538" vertical-offset="31" max-vertical-offset="663">
+        <state vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="663">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
+            <element signature="e#6#88#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/business/emails.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.346154" vertical-offset="403" max-vertical-offset="1156">
+        <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1156">
           <caret line="43" column="70" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="70" />
           <folding />
         </state>
@@ -976,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23396881" vertical-offset="188" max-vertical-offset="833">
           <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,31 +707,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/attended.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="476">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="476">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/changeQuantity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="476">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/removeAttendance.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="442">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/business/registrationsTable.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.884615" vertical-offset="1820" max-vertical-offset="2465">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1820" max-vertical-offset="2465">
           <caret line="139" column="1" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
           <folding>
             <marker date="1443837624877" expanded="true" signature="130:811" placeholder="SELECT r.reg..." />
@@ -1030,27 +731,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/templates/public/main.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5460993" vertical-offset="872" max-vertical-offset="1513">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/removeAttendance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35355285" vertical-offset="0" max-vertical-offset="577">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/admin/registrations/registrant/changeQuantity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3830156" vertical-offset="0" max-vertical-offset="577">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/presentation/templates/admin/registrations.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6028369" vertical-offset="5321" max-vertical-offset="7276">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6562" max-vertical-offset="10982">
           <caret line="386" column="69" selection-start-line="386" selection-start-column="69" selection-end-line="386" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/lib.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="196.27797" vertical-offset="0" max-vertical-offset="241349">
+          <caret line="6825" column="0" selection-start-line="6825" selection-start-column="0" selection-end-line="6825" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="4355" max-vertical-offset="18700">
+          <caret line="268" column="30" selection-start-line="268" selection-start-column="30" selection-end-line="268" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/validateForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/templates/public/nfeature.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577">
+          <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
           <folding>
-            <element signature="e#10734#10870#0#HTML" expanded="false" />
-            <element signature="e#10920#11058#0#HTML" expanded="false" />
-            <element signature="e#11096#11146#0#HTML" expanded="false" />
-            <element signature="e#11190#11322#0#HTML" expanded="false" />
-            <element signature="e#11364#11494#0#HTML" expanded="false" />
-            <element signature="e#11536#11666#0#HTML" expanded="false" />
-            <element signature="e#11704#12264#0#HTML" expanded="false" />
-            <element signature="e#12295#12602#0#HTML" expanded="false" />
-            <element signature="e#12650#12705#0#HTML" expanded="false" />
-            <element signature="e#16702#17141#0#HTML" expanded="false" />
-            <element signature="e#17177#17636#0#HTML" expanded="false" />
-            <element signature="e#17674#17990#0#HTML" expanded="false" />
-            <element signature="e#18032#18497#0#HTML" expanded="false" />
-            <element signature="e#20546#23706#0#HTML" expanded="false" />
-            <element signature="e#23730#23941#0#HTML" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/users.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.615385" vertical-offset="2581" max-vertical-offset="6103">
+          <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/main.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.423077" vertical-offset="86" max-vertical-offset="731">
+          <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/thegympark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2372" max-vertical-offset="5219">
+          <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/templates/public/nmain.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26343155" vertical-offset="52" max-vertical-offset="629">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

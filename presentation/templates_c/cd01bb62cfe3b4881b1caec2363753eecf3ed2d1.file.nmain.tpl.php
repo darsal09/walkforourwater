@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-02 17:55:09
+<?php /* Smarty version Smarty-3.1.8, created on 2015-11-07 23:14:34
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\public\nmain.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1795555da6f392ab983-62721838%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cd01bb62cfe3b4881b1caec2363753eecf3ed2d1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\public\\nmain.tpl',
-      1 => 1443822902,
+      1 => 1446956071,
       2 => 'file',
     ),
   ),
@@ -48,14 +48,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="container">
 			<?php echo $_smarty_tpl->getSubTemplate ("public/nmenu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-            <div class="row banner" style="padding-left:15px;padding-right:15px;">
-                <div class="col-md-12" style="color:white;margin-top:-20px;background-color:orangered;margin-left:10px margin-right:5px;">
-                    <h1>
-                        Update: <hr>
-                        We are expecting some rain, but the walk is still on. Please bring your rain gear!
-                    </h1>
-                </div>
-            </div>
 			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['obj']->value->mContent, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 			<div style="background:#3a3a3a;padding:20px;">

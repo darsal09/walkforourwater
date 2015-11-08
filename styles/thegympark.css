@@ -149,6 +149,10 @@ DIV.odd LI, DIV.even LI{
     border:1px solid #efefef;
 }
 
+.dataTables_filter{
+    text-align:right;
+}
+
 @media screen and (min-width:1000px){
 	.buttons{
 		color:#0D0D7A;

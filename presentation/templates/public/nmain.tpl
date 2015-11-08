@@ -20,14 +20,6 @@
 	<body>
 		<div class="container">
 			{include file="public/nmenu.tpl"}
-            <div class="row banner" style="padding-left:15px;padding-right:15px;">
-                <div class="col-md-12" style="color:white;margin-top:-20px;background-color:orangered;margin-left:10px margin-right:5px;">
-                    <h1>
-                        Update: <hr>
-                        We are expecting some rain, but the walk is still on. Please bring your rain gear!
-                    </h1>
-                </div>
-            </div>
 			{include file=$obj->mContent}
 			<div style="background:#3a3a3a;padding:20px;">
 				{include file="public/footer.tpl"}

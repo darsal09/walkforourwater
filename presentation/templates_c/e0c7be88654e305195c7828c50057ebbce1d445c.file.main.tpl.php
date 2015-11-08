@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-01 23:17:27
+<?php /* Smarty version Smarty-3.1.8, created on 2015-11-08 02:13:40
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1022955db098e1fe974-01224426%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0c7be88654e305195c7828c50057ebbce1d445c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\main.tpl',
-      1 => 1443755845,
+      1 => 1446966819,
       2 => 'file',
     ),
   ),
@@ -47,12 +47,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<body>
 			<?php echo $_smarty_tpl->getSubTemplate ("public/nmenu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-            <div class="row" style="background:black;">
-				<div class="col-md-2">
+            <div class="row" style="background:rgba(88, 151, 251, 0.53); margin-top:-18px;">
+				<div class="col-md-3">
 					<?php echo $_smarty_tpl->getSubTemplate ("admin/dashboardMenu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 				</div>
-				<div class="col-md-10" style="background:white;">
+				<div class="col-md-9" style="background:white;">
 					<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['obj']->value->mContent, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 				</div>

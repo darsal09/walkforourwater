@@ -19,11 +19,11 @@
 	</head>
 	<body>
 			{include file="public/nmenu.tpl"}
-            <div class="row" style="background:black;">
-				<div class="col-md-2">
+            <div class="row" style="background:rgba(88, 151, 251, 0.53); margin-top:-18px;">
+				<div class="col-md-3">
 					{include file="admin/dashboardMenu.tpl"}
 				</div>
-				<div class="col-md-10" style="background:white;">
+				<div class="col-md-9" style="background:white;">
 					{include file=$obj->mContent}
 				</div>
             </div>
