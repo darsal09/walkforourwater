@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-02 17:55:09
+<?php /* Smarty version Smarty-3.1.8, created on 2015-11-09 08:37:52
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\public\nfeature.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2684155da6f39305701-22077598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'da4f5caa25ee6ed26599a780dcde96e1c57688a1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\public\\nfeature.tpl',
-      1 => 1443822875,
+      1 => 1446956766,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_55da6f39309584_40517570',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55da6f39309584_40517570')) {function content_55da6f39309584_40517570($_smarty_tpl) {?>	<div class="row">
+<?php if ($_valid && !is_callable('content_55da6f39309584_40517570')) {function content_55da6f39309584_40517570($_smarty_tpl) {?>	<div class="row" style="margin-top:-20px;">
 		    <a href="/events/1"><img src="/images/walkforourwaterimage.png" class="img-responsive customized-image"/></a>
 	</div>
 <?php }} ?>

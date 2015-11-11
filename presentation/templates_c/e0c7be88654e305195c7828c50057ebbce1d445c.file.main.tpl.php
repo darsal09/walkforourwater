@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-11-08 02:13:40
+<?php /* Smarty version Smarty-3.1.8, created on 2015-11-09 08:42:43
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1022955db098e1fe974-01224426%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0c7be88654e305195c7828c50057ebbce1d445c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\main.tpl',
-      1 => 1446966819,
+      1 => 1447076561,
       2 => 'file',
     ),
   ),
@@ -56,6 +56,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['obj']->value->mContent, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 				</div>
+                <div class="foooter">
+                    &copy; 2015-<?php echo date('Y');?>
+
+                </div>
             </div>
 	</body>
 	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>

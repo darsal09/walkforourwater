@@ -26,6 +26,9 @@
 				<div class="col-md-9" style="background:white;">
 					{include file=$obj->mContent}
 				</div>
+                <div class="foooter">
+                    &copy; 2015-{date( 'Y' )}
+                </div>
             </div>
 	</body>
 	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
