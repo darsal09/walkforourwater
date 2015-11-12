@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-01 23:14:36
+<?php /* Smarty version Smarty-3.1.8, created on 2015-11-11 18:57:44
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\users.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1594355db0b13cb8af7-51779690%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c0a14c17b989e11677746428b702741bb68e68c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\users.tpl',
-      1 => 1443472408,
+      1 => 1447286262,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_55db0b13cb8af1_60126707')) {function content_55db0b13cb8af1_60126707($_smarty_tpl) {?><?php if (!is_callable('smarty_function_load_presentation_object')) include 'C:\\xampp\\htdocs\\walkforourwater/presentation/smarty_plugins\\function.load_presentation_object.php';
 ?><?php echo smarty_function_load_presentation_object(array('filename'=>"usersController",'foldername'=>"admin",'assign'=>"obj"),$_smarty_tpl);?>
 
+<p>&nbsp;</p>
 	<div class="row">
 		<div class="col-md-12">
 			<p>
@@ -169,7 +170,7 @@ var users ={
 				'first':row.first,
 				'last':row.last,
 				'email':row.email,
-				'status':row.status.toLowerCase()
+				'status':row.status
 			}, this );
 		},
 		onAddUserClicked:function(e){
@@ -271,7 +272,7 @@ var addUser = {
 	}
 
 
-}
+};
 
 var editUser={
 	init:function( row, event ){
@@ -329,8 +330,8 @@ var editUser={
 	loadUser:function( row ){
 		var active  = $( '#editUserFormActive' );
 		var inactive = $( '#editUserFormInactive' );
-		
-		if( row.status == 'active' ){
+
+		if( row.status == 'Active' ){
 			active.addClass( 'selected' );
 			active.removeClass( 'no-selected' );
 			inactive.removeClass( 'selected');

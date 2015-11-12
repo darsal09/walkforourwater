@@ -3,6 +3,19 @@ html {
     font-family: sans-serif;
     font-size: 62.5%;
 }
+.admin_menu A{
+    text-decoration:none;
+    font-weight:bolder;
+}
+.admin_menu A DIV{
+    background:darkred;
+    color:white;
+    text-decoration:none;
+    padding:5px;
+}
+.admin_menu A DIV:hover{
+    background:dodgerblue;
+}
 .time{
 	font-weight:bold;
 	font-style:italic;

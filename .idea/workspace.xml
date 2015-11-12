@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1362bb9d-6167-4388-a002-050482d8a72c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/2c0a14c17b989e11677746428b702741bb68e68c.file.users.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/2c0a14c17b989e11677746428b702741bb68e68c.file.users.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/5163383e2552be3ded911739eb76a9cd43dd38c3.file.dashboardMenu.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/5163383e2552be3ded911739eb76a9cd43dd38c3.file.dashboardMenu.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/da4f5caa25ee6ed26599a780dcde96e1c57688a1.file.nfeature.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/da4f5caa25ee6ed26599a780dcde96e1c57688a1.file.nfeature.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl" afterPath="$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates_c/e0c7be88654e305195c7828c50057ebbce1d445c.file.main.tpl.php" afterPath="$PROJECT_DIR$/presentation/templates_c/e0c7be88654e305195c7828c50057ebbce1d445c.file.main.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/admin/main.tpl" afterPath="$PROJECT_DIR$/presentation/templates/admin/main.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/thegympark.css" afterPath="$PROJECT_DIR$/styles/thegympark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/admin/users/update.php" afterPath="$PROJECT_DIR$/api/admin/users/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/templates/admin/users.tpl" afterPath="$PROJECT_DIR$/presentation/templates/admin/users.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="walkforourwater.iws" />
@@ -75,28 +78,36 @@
       <file leaf-file-name="dashboardMenu.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="255">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="289">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nmain.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presentation/templates/public/nmain.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.153847" vertical-offset="22" max-vertical-offset="629">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/presentation/templates/admin/users.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2581" max-vertical-offset="6103">
-              <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.3067376" vertical-offset="2275" max-vertical-offset="3230">
+              <caret line="314" column="46" selection-start-line="314" selection-start-column="46" selection-end-line="314" selection-end-column="46" />
+              <folding>
+                <element signature="n#div#2;n#!!top" expanded="false" />
+                <element signature="e#4480#4614#0#HTML" expanded="false" />
+                <element signature="e#4634#4849#0#HTML" expanded="false" />
+                <element signature="e#5977#7702#0#HTML" expanded="false" />
+                <element signature="e#7748#8156#0#HTML" expanded="false" />
+                <element signature="e#8176#8436#0#HTML" expanded="false" />
+                <element signature="e#8442#9128#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/admin/users/update.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="374">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -125,18 +136,18 @@
       <file leaf-file-name="thegympark.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/thegympark.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2372" max-vertical-offset="5219">
-              <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5440">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentation/templates/admin/main.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70537263" vertical-offset="86" max-vertical-offset="782">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            <state vertical-scroll-proportion="-11.076923" vertical-offset="137" max-vertical-offset="782">
+              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -172,7 +183,6 @@
         <option value="$PROJECT_DIR$/api/admin/users/all.php" />
         <option value="$PROJECT_DIR$/business/email.class.php" />
         <option value="$PROJECT_DIR$/api/admin/registrations/registrant/sendEmail.php" />
-        <option value="$PROJECT_DIR$/presentation/templates/admin/users.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/public/eventschedule.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/public/event.tpl" />
         <option value="$PROJECT_DIR$/business/registrationsEmailsTable.class.php" />
@@ -190,10 +200,12 @@
         <option value="$PROJECT_DIR$/presentation/templates/public/nfeature.tpl" />
         <option value="$PROJECT_DIR$/scripts/validateForms.js" />
         <option value="$PROJECT_DIR$/scripts/validateForm.js" />
-        <option value="$PROJECT_DIR$/styles/thegympark.css" />
-        <option value="$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl" />
         <option value="$PROJECT_DIR$/presentation/templates/public/nmain.tpl" />
+        <option value="$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl" />
+        <option value="$PROJECT_DIR$/styles/thegympark.css" />
         <option value="$PROJECT_DIR$/presentation/templates/admin/main.tpl" />
+        <option value="$PROJECT_DIR$/api/admin/users/update.php" />
+        <option value="$PROJECT_DIR$/presentation/templates/admin/users.tpl" />
       </list>
     </option>
   </component>
@@ -330,6 +342,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="walkforourwater" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="walkforourwater" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="walkforourwater" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="walkforourwater" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -458,13 +510,20 @@
       <option name="project" value="LOCAL" />
       <updated>1446967199816</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="worked on creating a functionality to send update emails to attendees">
+      <created>1447213668025</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1447213668025</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -480,7 +539,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -607,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="1190">
           <caret line="41" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/admin/users/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="374">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -796,6 +847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="196.27797" vertical-offset="0" max-vertical-offset="241349">
           <caret line="6825" column="0" selection-start-line="6825" selection-start-column="0" selection-end-line="6825" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -818,22 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577">
           <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/users.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2581" max-vertical-offset="6103">
-          <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/thegympark.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2372" max-vertical-offset="5219">
-          <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -872,28 +908,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl">
+    <entry file="file://$PROJECT_DIR$/styles/thegympark.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="255">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5440">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/templates/public/nmain.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.153847" vertical-offset="22" max-vertical-offset="629">
+        <state vertical-scroll-proportion="0.72790295" vertical-offset="22" max-vertical-offset="629">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/dashboardMenu.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="289">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/templates/admin/main.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70537263" vertical-offset="86" max-vertical-offset="782">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        <state vertical-scroll-proportion="-11.076923" vertical-offset="137" max-vertical-offset="782">
+          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/admin/users/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="374">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presentation/templates/admin/users.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3067376" vertical-offset="2275" max-vertical-offset="3230">
+          <caret line="314" column="46" selection-start-line="314" selection-start-column="46" selection-end-line="314" selection-end-column="46" />
+          <folding>
+            <element signature="n#div#2;n#!!top" expanded="false" />
+            <element signature="e#4480#4614#0#HTML" expanded="false" />
+            <element signature="e#4634#4849#0#HTML" expanded="false" />
+            <element signature="e#5977#7702#0#HTML" expanded="false" />
+            <element signature="e#7748#8156#0#HTML" expanded="false" />
+            <element signature="e#8176#8436#0#HTML" expanded="false" />
+            <element signature="e#8442#9128#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

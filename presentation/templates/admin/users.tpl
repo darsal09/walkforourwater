@@ -1,4 +1,5 @@
 {load_presentation_object filename="usersController" foldername="admin" assign="obj"}
+<p>&nbsp;</p>
 	<div class="row">
 		<div class="col-md-12">
 			<p>
@@ -146,7 +147,7 @@ var users ={
 				'first':row.first,
 				'last':row.last,
 				'email':row.email,
-				'status':row.status.toLowerCase()
+				'status':row.status
 			}, this );
 		},
 		onAddUserClicked:function(e){
@@ -248,7 +249,7 @@ var addUser = {
 	}
 
 
-}
+};
 
 var editUser={
 	init:function( row, event ){
@@ -306,8 +307,8 @@ var editUser={
 	loadUser:function( row ){
 		var active  = $( '#editUserFormActive' );
 		var inactive = $( '#editUserFormInactive' );
-		
-		if( row.status == 'active' ){
+
+		if( row.status == 'Active' ){
 			active.addClass( 'selected' );
 			active.removeClass( 'no-selected' );
 			inactive.removeClass( 'selected');
