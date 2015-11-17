@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-11-11 08:44:20
+<?php /* Smarty version Smarty-3.1.8, created on 2015-11-16 08:36:58
          compiled from "C:\xampp\htdocs\walkforourwater/presentation/templates\admin\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1022955db098e1fe974-01224426%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0c7be88654e305195c7828c50057ebbce1d445c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\walkforourwater/presentation/templates\\admin\\main.tpl',
-      1 => 1447249458,
+      1 => 1447681015,
       2 => 'file',
     ),
   ),
@@ -57,10 +57,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 				</div>
             </div>
-                <div class="foooter">
+            ,<div class="row">
+                <div class="footer" style="padding-left:15px;">
                     &copy; 2015-<?php echo date('Y');?>
-
+ All rights reserved to Walk For Our Water
                 </div>
+            </div>
     </body>
 	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js"></script>

@@ -27,9 +27,11 @@
 					{include file=$obj->mContent}
 				</div>
             </div>
-                <div class="foooter">
-                    &copy; 2015-{date( 'Y' )}
+            ,<div class="row">
+                <div class="footer" style="padding-left:15px;">
+                    &copy; 2015-{date( 'Y' )} All rights reserved to Walk For Our Water
                 </div>
+            </div>
     </body>
 	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js"></script>

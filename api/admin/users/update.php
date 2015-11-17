@@ -8,7 +8,7 @@
 											'email' => FILTER_SANITIZE_EMAIL,
 											'status' => FILTER_SANITIZE_STRING,
 								]);
-    print_r( $data );
+    
 	$user = new users( $data );
 	
 	$result = $user->update();

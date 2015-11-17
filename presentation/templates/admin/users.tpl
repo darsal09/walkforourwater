@@ -323,8 +323,9 @@ var editUser={
 		}
 		
 		$.each( row, function( field, value ){
-			$('#editUserForm input[name='+field+']').val( value );
-			
+            if( field !== 'status' ) {
+                $('#editUserForm input[name=' + field + ']').val(value);
+            }
 		})
 	},
 	saveUser:function(){
